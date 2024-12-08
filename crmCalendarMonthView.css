@@ -98,7 +98,7 @@ button {
     
 }
 
-table.calendar-table-month thead tr th{
+.calendar-table-month thead tr th{
     background-color: white;
     text-align: center;
     font-size: .87rem;
@@ -106,39 +106,39 @@ table.calendar-table-month thead tr th{
     padding: .25rem !important;
 }
 
-table.calendar-table-month tbody tr {
+.calendar-table-month tbody tr {
     height: 5.5rem;
 }
 
-table.calendar-table-month tbody tr:first-child td {
+.calendar-table-month tbody tr:first-child td {
     border-top: none !important;
 }
 
-table.calendar-table-month tbody tr td {
+.calendar-table-month tbody tr td {
     vertical-align: top;
     padding: .13rem;
 }
 
-.weekday {
+.calendar-table-month .weekday {
     background-color: var(--gray-color);
     padding: 1rem 0;
     border-radius: .62rem;
 }
 
-.day-cell {
+.calendar-table-month .day-cell {
     position: relative;
     font-size: .62rem;
     line-height: .87rem;
 }
 
-.day {
+.calendar-table-month .day {
     position: absolute;
     right: 1rem;
     font-size: .87rem !important;
     font-weight: 400;
 }
 
-.has-appt {
+.calendar-table-month .has-appt {
     background-color: #fff7e9;
     height: 5.5rem !important;
     width: 100%;
