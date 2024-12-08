@@ -71,7 +71,14 @@ menuLinks.forEach(link => {
       // Reset the icon to its default state (add `-1` only if not already present)
       const icon = item.querySelector('.menu-icon');
       if (icon) {
-        icon.src = icon.src.replace(/-1\.svg$/, '.svg').replace(/\.svg$/, '-1.svg'); 
+        icon.src = icon.src.replace(/-1\.svg$/, '.svg').replace(/\.svg$/, '-1.svg');
+      }
+
+      // Change the font color for inactive menu-text
+      const menuText = item.querySelector('.menu-text');
+      if (menuText) {
+        menuText.style.color = '#B0B2B9';
+        menuText.style.fontWeight = '500';
       }
     });
 
@@ -111,7 +118,14 @@ menuLinks.forEach(link => {
     // Update the icon for the active link
     const activeIcon = this.querySelector('.menu-icon');
     if (activeIcon) {
-      activeIcon.src = activeIcon.src.replace(/-1\.svg$/, '.svg'); // Remove `-1` for active icon
+      activeIcon.src = activeIcon.src.replace(/-1\.svg$/, '.svg');
+    }
+
+    // Change the font color for the active menu-text
+    const activeMenuText = this.querySelector('.menu-text');
+    if (activeMenuText) {
+      activeMenuText.style.color = '#FFFFFF';
+      activeMenuText.style.fontWeight = '600';
     }
   });
 });
