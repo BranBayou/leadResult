@@ -220,11 +220,12 @@ margin-left: 0.3125rem; /* 5px */
 
 .column {
 width: 1.125rem; /* 18px */
-border-radius: 0.25rem 0.25rem 0 0; /* 4px */
+border-radius: 0.4rem 0.4rem 0 0; /* 4px */
 background-color: var(--orange-color);
 height: 0%;
 animation: grow 1s ease forwards;
 z-index: 1;
+margin-bottom: .5rem;
 }
 
 .column[data-percentage="80"] { animation-delay: 0.2s; }
