@@ -1,0 +1,341 @@
+:root {
+    --dark-color: #181D30;
+    --orange-color: #FBA919;
+    --blue-color: #25A0DB;
+    --light-blue-color: #D9EEF7;
+    --gray-color: #f6f8fa;
+    --dark-gray-color: #e5e5e5;
+    --white-color: #ffffff;
+    --bar-color-dard: #656868;
+    --bar-cloor-blue: #677DCD;
+    --bar-color-green: #54A9BB;
+    --bar-color-yellow: #FFCF67;
+    --bar-color-red: #CA8182;
+    --bar-color-orange: #FFD9B7;
+  }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background-color: var(--gray-color);
+    color: #333;
+    display: flex;
+}
+
+nav {
+    width: 16.94%;
+    padding: 1rem;
+    background-color: var(--dark-color);
+    height: 100vh;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    width: 83.06%;
+}
+
+header {
+    width: 100%;
+    height: 72px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+header .header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .header-left p {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+header .header-left p span {
+    font-weight: 400;
+    color: var(--dark-color);
+}
+
+header .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .header-right .switch-store-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    width: 11rem;
+    height: 2.5rem;
+    background-color: var(--gray-color);
+    border-radius: 12px;
+    outline: none;
+    border: none;
+}
+
+header .header-right .next-arrow-button, .prev-arrow-button {
+    background-color: var(--light-blue-color);
+    border-radius: 12px;
+    height: 2.25rem;
+    width: 2.25rem;
+    outline: none;
+    border: none;
+}
+
+.main-section-top {
+    padding: 1rem 2rem;
+}
+
+.main-section-top h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.main-section-buttons-div {
+    display: flex;
+    gap: 1rem;
+}
+
+.main-section-buttons-div button {
+    width: 11.5rem;
+    border-radius: 200px;
+    border: none;
+    outline: none;
+    height: 2.5rem;
+    font-size: .875rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.main-section-buttons-div button:first-child {
+    background-color: var(--orange-color);
+    color: var(--white-color);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.main-section-buttons-div button:last-child {
+    background-color: var(--dark-gray-color);
+    color: var(--dark-color);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.main-section-appointments-details {
+    padding: 1rem 2rem;
+}
+
+.main-section-appointments-details-toggle {
+    padding: 0 0 1rem 0;
+}
+
+
+/* Chart Styles */
+
+.charts-div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.appt-title-div {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.appt-title-div p {
+    font-size: .6875rem;
+}
+
+.appt-title-div p span {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.chart-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+    /*width: 500px;*/
+    height: 208px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chart-container .percentage-label {
+    position: absolute;
+    left: 40px;
+    transform: translateX(-150%);
+    color: #666;
+    font-size: 12px;
+  }
+  
+  .chart-container .percentage-label::after {
+    content: '';
+    position: absolute;
+    left: 50px; /* Start after the percentage labels */
+    width: calc(100% - 50px); /* Full width minus left offset */
+    height: 1px;
+    background-color: #ddd;
+  }
+  
+  .chart-container .percentage-label[data-value="80"] {
+    bottom: 80%;
+  }
+  
+  .chart-container .percentage-label[data-value="80"]::after {
+    top: 0; /* Align with the label */
+  }
+  
+  .chart-container .percentage-label[data-value="60"] {
+    bottom: 60%;
+  }
+  
+  .chart-container .percentage-label[data-value="60"]::after {
+    top: 0;
+  }
+  
+  .chart-container .percentage-label[data-value="40"] {
+    bottom: 40%;
+  }
+  
+  .chart-container .percentage-label[data-value="40"]::after {
+    top: 0;
+  }
+  
+  .chart-container .percentage-label[data-value="20"] {
+    bottom: 20%;
+  }
+  
+  .chart-container .percentage-label[data-value="20"]::after {
+    top: 0;
+  }
+  
+  .chart-container .percentage-label[data-value="0"] {
+    bottom: 0;
+  }
+  
+  .chart-container .percentage-label[data-value="0"]::after {
+    top: 0;
+  }
+  
+  .column {
+    width: 1.2rem;
+    border-radius: 16px 16px 0 0;
+    animation: grow 1s ease-out;
+  }
+
+  .column[data-percentage="70"] {
+    height: 70%;
+    background-color: var(--orange-color);
+  }
+
+  .column[data-percentage="43"] {
+    height: 43%;
+    background-color: var(--bar-color-dard);
+  }
+
+  .column[data-percentage="55"] {
+    height: 55%;
+    background-color: var(--bar-cloor-blue);
+  }
+
+  .column[data-percentage="42"] {
+    height: 42%;
+    background-color: var(--bar-color-green);
+  }
+
+  .column[data-percentage="44"] {
+    height: 44%;
+    background-color: var(--bar-color-yellow);
+  }
+
+  .column[data-percentage="37"] {
+    height: 37%;
+    background-color: var(--bar-color-red);
+  }
+
+  .column[data-percentage="16"] {
+    height: 16%;
+    background-color: var(--bar-color-orange);
+  }
+
+  @keyframes grow {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--final-height, 100%);
+    }
+  }
+
+  /* Search Section Styles */
+
+  .search-section {
+    width: 100%;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .search-section-input-div {
+    width: 47.25rem;
+    background-color: var(--white-color);
+    margin: 0 auto;
+    border-radius: 200px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .search-section h3 {
+    margin: 1rem;
+  }
+
+  .search-section-input-div input {
+    width: 100%;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 200px;
+  }
+
+  .search-suggestions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .search-suggestions button {
+    background-color: var(--dark-gray-color);
+    border-radius: 200px;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    outline: none;
+  }
+
+
