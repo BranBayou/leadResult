@@ -34,6 +34,10 @@ body {
 
 /* Nav section Styling */
 
+.logo-div {
+  padding: 0 1rem;
+}
+
 nav {
   width: 16.94%;
   padding: 1rem;
@@ -105,7 +109,18 @@ nav {
   height: 3rem;
   color: var(--white-color);
   width: 100%;
+  padding: 0 1rem;
 }
+
+.crm-nav-con button:hover,
+.dirve-nav-con button:hover,
+.marketing-nav-con button:hover,
+.dnc-nav-con button:hover,
+.settings-nav-con button:hover,
+.logout-nav-con button:hover {
+  background-color: var(--nav-bg-color);
+  border-radius: .87rem;
+ }
 
 /* Main section styling */
 
@@ -296,6 +311,26 @@ height: 0%;
 animation: grow 1s ease forwards;
 z-index: 1;
 margin-bottom: .5rem;
+}
+
+.appt-day2 {
+  background-color: var(--bar-color-dard) !important;
+}
+
+.appt-day3 {
+  background-color: var(--bar-cloor-blue) !important;
+}
+
+.appt-day4 {
+  background-color: var(--bar-color-green) !important;
+}
+
+.appt-day5 {
+  background-color: var(--bar-color-yellow) !important;
+}
+
+.appt-day6 {
+  background-color: var(--bar-color-red) !important;
 }
 
 .single-column {
