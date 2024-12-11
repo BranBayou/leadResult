@@ -88,6 +88,12 @@ nav {
   color: var(--white-color);
   height: 2.5rem;
   padding: 0 3rem;
+  width: 100%;
+}
+
+.scheduling-nav-inner-div button:hover {
+  background: var(--dark-color);
+  border-radius: .87rem;
 }
 
 .crm-nav-con {
