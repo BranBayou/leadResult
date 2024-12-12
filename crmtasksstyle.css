@@ -8,6 +8,7 @@
     --button-bg-li-gray: #DEE4F3;
     --button-bg-blue: #DEE9EE;
     --button-p-color: #737373;
+    --tabel-bg: #F6F8FA;
 }
 
 .main-section-buttons-div .main-section-button-search {
@@ -96,5 +97,65 @@
 
 /**** Tasks Table Styling ****/
 
+.tasks-tabel-section table thead tr{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    padding: 1rem 0;
+}
+.tasks-tabel-section table tbody tr{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    padding: 1rem 0;
+}
 
+table {
+    width: 100%;
+    background-color: #fff !important;
+}
 
+thead {
+    background-color: var(--tabel-bg) !important;
+    border-radius: 0.625rem !important;
+}
+
+th, td {
+    padding: 0 1rem;
+    text-align: left;
+}
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.filter-input-div {
+    display: flex;
+    background-color: #fff;
+    height: 2rem;
+    border-radius: .75rem;
+    padding: 0 .5rem;
+}
+
+.th-name {
+    font-size: 0.625rem;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.filter-input {
+    width: 100%;
+    padding: 4px;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+
+tbody tr td {
+    font-size: 0.8125rem;
+    color: #000;
+    font-weight: 400;
+}
