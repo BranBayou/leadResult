@@ -288,7 +288,8 @@ header .header-right .next-arrow-button, .prev-arrow-button {
 
 /* Chart Styles */
 
-.charts-div {
+.charts-div,
+.tasks-category-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem; /* 16px */
