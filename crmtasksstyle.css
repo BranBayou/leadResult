@@ -27,17 +27,7 @@ main {
   }
   
   .scheduling-nav .scheduling-button {
-    width: 100%;
-    background-color: var(--blue-color);
-    height: 3rem;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    border: none;
-    outline: none;
-    border-radius: .8rem;
-    color: var(--white-color);
-    padding: 0 1rem;
+    justify-content: center;
   }
   
   .scheduling-nav .scheduling-button span {
@@ -53,16 +43,8 @@ main {
   }
   
   .scheduling-nav-inner-div button {
-    border: none;
-    outline: none;
-    background-color: transparent;
-    color: var(--white-color);
-    height: 2.5rem;
-    padding: 0 3rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: .5rem;
+    padding: 0;
+    justify-content: center;
   }
   
   .scheduling-nav-inner-div button span {
@@ -90,6 +72,41 @@ main {
     border-radius: .87rem;
   }
 
+  .crm-nav-con {
+  width: 100%;
+}
+
+.crm-nav-con button,
+.dirve-nav-con button,
+.marketing-nav-con button,
+.dnc-nav-con button,
+.settings-nav-con button,
+.logout-nav-con button {
+  padding: 0;
+  justify-content: center;
+}
+
+.scheduling-nav .scheduling-button img,
+.crm-nav-con button img,
+.dirve-nav-con button img,
+.marketing-nav-con button img,
+.dnc-nav-con button img,
+.settings-nav-con button img,
+.logout-nav-con button img{
+  width: 1.4rem;
+}
+
+.crm-nav-con button:hover,
+.dirve-nav-con button:hover,
+.marketing-nav-con button:hover,
+.dnc-nav-con button:hover,
+.settings-nav-con button:hover,
+.logout-nav-con button:hover {
+  background-color: var(--nav-bg-color);
+  border-radius: .87rem;
+ }
+
+/* Main Section */
 
 .main-section-buttons-div .main-section-button-search {
     background-color: var(--dark-gray-color) !important;
