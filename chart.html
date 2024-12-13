@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horizontal Column Graph</title>
+    <title>Vertical Column Graph</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,95 +14,95 @@
             margin: 0;
             background-color: #f4f4f4;
         }
-        .graph-container {
-            width: 80%;
+        .graph-container2 {
+            display: flex;
+            align-items: flex-end;
+            width: 60%;
             max-width: 600px;
-            margin: 20px;
             position: relative;
         }
-        .bar {
+        .y-axis2 {
+            width: 40px;
             display: flex;
-            align-items: center;
-            margin: 10px 0;
-        }
-        .bar-label {
-            width: 20%;
-            text-align: right;
-            margin-right: 10px;
-        }
-        .bar-track {
-            width: 80%;
-            height: 25px;
-            background: #e0e0e0;
-            border-radius: 12.5px;
-            overflow: hidden;
-            position: relative;
-        }
-        .bar-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #4caf50, #81c784);
-            width: 0;
-            border-radius: 12.5px;
-            position: absolute;
-            animation: growBar 2s ease-in-out forwards;
-        }
-        @keyframes growBar {
-            from {
-                width: 0;
-            }
-            to {
-                width: var(--bar-width);
-            }
-        }
-        .percentage-scale {
-            display: flex;
+            flex-direction: column;
             justify-content: space-between;
-            position: absolute;
-            bottom: -20px;
-            width: 80%;
-            left: 20%;
+            height: 300px;
+            margin-right: 10px;
             font-size: 14px;
             color: #555;
+            text-align: right;
+        }
+        .columns-container2 {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .columns2 {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            height: 300px;
+            position: relative;
+        }
+        .column2 {
+            width: 20%;
+            background: linear-gradient(to top, #4caf50, #81c784);
+            border-radius: 5px 5px 0 0;
+            position: relative;
+            bottom: 0;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            animation: growColumn 2s ease-in-out forwards;
+        }
+        .column2:nth-child(1) {
+            height: 80%;
+            animation-delay: 0s;
+        }
+        .column2:nth-child(2) {
+            height: 60%;
+            animation-delay: 0.2s;
+        }
+        .column2:nth-child(3) {
+            height: 90%;
+            animation-delay: 0.4s;
+        }
+        .column2-label {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        @keyframes growColumn {
+            from {
+                transform: scaleY(0);
+            }
+            to {
+                transform: scaleY(1);
+            }
         }
     </style>
 </head>
 <body>
-    <div class="graph-container">
-        <div class="bar">
-            <div class="bar-label">HTML</div>
-            <div class="bar-track">
-                <div class="bar-fill" style="--bar-width: 80%;"></div>
-            </div>
-        </div>
-
-        <div class="bar">
-            <div class="bar-label">CSS</div>
-            <div class="bar-track">
-                <div class="bar-fill" style="--bar-width: 60%;"></div>
-            </div>
-        </div>
-
-        <div class="bar">
-            <div class="bar-label">JavaScript</div>
-            <div class="bar-track">
-                <div class="bar-fill" style="--bar-width: 90%;"></div>
-            </div>
-        </div>
-
-        <div class="bar">
-            <div class="bar-label">React</div>
-            <div class="bar-track">
-                <div class="bar-fill" style="--bar-width: 70%;"></div>
-            </div>
-        </div>
-
-        <div class="percentage-scale">
-            <span>0%</span>
-            <span>20%</span>
-            <span>40%</span>
-            <span>60%</span>
-            <span>80%</span>
+    <div class="graph-container2">
+        <div class="y-axis2">
             <span>100%</span>
+            <span>80%</span>
+            <span>60%</span>
+            <span>40%</span>
+            <span>20%</span>
+            <span>0%</span>
+        </div>
+        <div class="columns-container2">
+            <div class="columns2">
+                <div class="column2"></div>
+                <div class="column2"></div>
+                <div class="column2"></div>
+            </div>
+            <div class="">
+                <span class="column-label">HTML</span>
+                <span class="column-label">CSS</span>
+                <span class="column-label">JavaScript</span>
+            </div>
         </div>
     </div>
 </body>
