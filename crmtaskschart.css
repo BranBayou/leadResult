@@ -134,7 +134,16 @@
   /* Column Chart */
 
   .chart-title-bottom {
-    padding: 0 .5rem;
+    background-color: var(--gray-color);
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .chart-title-bottom  p {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #181D30;
   }
 
 .column-chart-section {
@@ -148,8 +157,10 @@
 }
 
 .column-chart-div {
+    padding: .5rem;
     background-color: white;
     height: 22rem;
+    border-radius: 12px;
 }
 
 .graph-container {
