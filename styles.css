@@ -53,7 +53,7 @@ nav {
   width: 16.94%;
   padding: 1rem;
   background-color: var(--dark-color);
-  height: 100vh;
+  min-height: 100vh;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
