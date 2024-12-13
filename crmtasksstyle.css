@@ -14,6 +14,7 @@
 /* Nav Section */
 nav {
     width: 4.4% !important;
+    padding: 1rem .5rem !important;
 }
 
 main {
@@ -21,13 +22,14 @@ main {
 }
 
 .scheduling-nav-con {
-    background-color: var(--nav-bg-color) ;
+    background-color: transparent !important;
     border-radius: .87rem;
     margin: 0 0 .25rem 0;
   }
   
   .scheduling-nav .scheduling-button {
     justify-content: center;
+    background-color: transparent !important;
   }
   
   .scheduling-nav .scheduling-button span {
@@ -73,8 +75,13 @@ main {
   }
 
   .crm-nav-con {
-  width: 100%;
-}
+    width: 100%;
+  }
+
+  .crm-nav-con .scheduling-button {
+    background-color: var(--blue-color);
+    border-radius: .87rem;
+  }
 
 .crm-nav-con button,
 .dirve-nav-con button,
