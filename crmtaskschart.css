@@ -164,16 +164,16 @@
 }
 
 .column-chart-div {
-    padding: .5rem;
+    padding: .25rem;
     background-color: white;
-    height: 22rem;
+    /* height: 22rem; */
     border-radius: 12px;
 }
 
 .graph-container {
     width: 100%;
     max-width: 600px;
-    margin: 20px;
+    padding: 1rem;
     position: relative;
 }
 .bar {
@@ -184,7 +184,8 @@
 .bar-label {
     width: 40%;
     text-align: left;
-    margin-right: 10px;
+    font-size: .78rem;
+    font-weight: 500;
 }
 .bar-track {
     width: 60%;
@@ -238,11 +239,18 @@
     display: flex;
     justify-content: space-between;
     position: absolute;
-    bottom: -20px;
+    bottom: -6px;
     width: 60%;
     right: 0;
     font-size: 14px;
     color: #555;
+}
+
+.percentage-scale span,
+.y-axis2 span {
+    font-size: .75rem;
+    color: #000;
+    font-weight: 500;
 }
 
 /* Column chart 2 */
@@ -271,6 +279,13 @@
     flex-direction: column;
     width: 100%;
 }
+
+.columns-container2 .column-names .column-label {
+    font-size: .7rem;
+    font-weight: 500;
+    color: #181D30;
+}
+
 .columns2 {
     display: flex;
     justify-content: space-around;
