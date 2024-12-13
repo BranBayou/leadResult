@@ -74,6 +74,20 @@ main {
     border-radius: .87rem;
   }
 
+  .crm-nav {
+    background-color: var(--nav-bg-color) ;
+    border-radius: .87rem;
+    margin: 0 0 .25rem 0;
+  }
+
+  .crm-nav-con .scheduling-nav-inner-div button img {
+    width: 1rem;
+  }
+
+  .crm-nav-con .scheduling-nav-inner-div button:hover {
+    background: var(--dark-color);
+  } 
+
   .crm-nav-con {
     width: 100%;
   }
