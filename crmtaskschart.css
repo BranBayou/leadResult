@@ -52,7 +52,14 @@
 .charts-div {
     padding: 1rem 0;
     overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
+
+.charts-div::-webkit-scrollbar {
+    display: none;
+}
+
 
 .chart-main-con {
     width: 27rem;
