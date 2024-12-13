@@ -253,6 +253,16 @@
     font-weight: 500;
 }
 
+.y-axis2 span {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.y-axis2 span .line img{
+    height: 1px;
+}
+
 /* Column chart 2 */
 
 .graph-container2 {
