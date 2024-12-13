@@ -133,6 +133,10 @@
 
   /* Column Chart */
 
+  .chart-title-bottom {
+    padding: 0 .5rem;
+  }
+
 .column-chart-section {
     background-color: var(--gray-color);
     margin: 1rem 2rem;
@@ -171,9 +175,34 @@
     overflow: hidden;
     position: relative;
 }
+
+.fill-orange {
+    background-color: var(--orange-color);
+}
+
+.fill-dark {
+    background-color: #3D3E3E;;
+}
+
+.fill-blue {
+    background-color: var(--chart-color-blue);
+}
+
+.fill-green {
+    background-color: var(--chart-color-green);
+}
+
+.fill-yellow {
+    background-color: var(--chart-color-yellow);
+}
+
+.fill-gray {
+    background-color: #8989BA;
+}
+
 .bar-fill {
     height: 1.5rem;
-    background: var(--orange-color);
+    
     width: 0;
     border-radius: .37rem;
     position: absolute;
