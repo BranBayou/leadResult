@@ -1,0 +1,133 @@
+:root {
+    --gray-color: #f6f8fa;
+    --chart-color-blue: #5366AB;
+    --chart-color-green: #438E9E;
+    --chart-color-yellow: #FFCF67;
+    --chart-color-orange: #FBA919;
+}
+.success-report-show-div {
+    height: 2.25rem;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.success-report-show-div .report-filter-div {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 17rem;
+    border-radius: 12.5rem;
+}
+
+.success-report-show-div .report-filter-div input{
+    border: none;
+    outline: none;
+}
+
+.pichart-section,
+.graph-chart-section {
+    background-color: white;
+    margin: 1rem 2rem;
+    padding: .25rem;
+    border-radius: .75rem;
+}
+
+.chart-title {
+    text-align: center;
+    background-color: var(--gray-color);
+    border-radius: .62rem;
+    padding: 1rem 0;
+}
+
+.chart-title h1 {
+    color: #181D30;
+    font-size: 1rem !important;
+}
+
+/* PI Chart Section */
+
+.charts-div {
+    padding: 1rem 0;
+    overflow-x: scroll;
+    width: 100%;
+}
+
+.chart-main-con {
+    width: 27rem;
+    height: 10.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.chart-container {
+    position: relative;
+    width: 8.25rem;
+    height: 8.25rem;
+  }
+
+  .donut-chart {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+      var(--chart-color-green) 0% 10%,
+      #ffffff 10% 11%,
+      var(--chart-color-orange) 11% 25%,
+      #ffffff 25% 26%,
+      var(--chart-color-yellow) 26% 70%,
+      #ffffff 70% 71%,
+      var(--chart-color-blue) 71% 95%,
+      #ffffff 95% 96%,
+      var(--chart-color-green) 96% 100%
+    );
+    transform: scale(0);
+    animation: grow 1s ease-out forwards;
+    position: relative;
+  }
+
+  .donut-chart::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    background: #f4f4f9;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  @keyframes grow {
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .segment-tooltip {
+    position: absolute;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .chart-container:hover .segment-tooltip {
+    opacity: 1;
+    transform: translate(-50%, -20px);
+  }
+
+  .donut-chart:hover {
+    cursor: pointer;
+    filter: brightness(1.2);
+  }
