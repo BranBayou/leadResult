@@ -5,6 +5,8 @@
     --chart-color-green: #438E9E;
     --chart-color-yellow: #FFCF67;
     --chart-color-orange: #FBA919;
+    --light-blue-color: #D9EEF7;
+    --blue-color: #25A0DB;
 }
 .success-report-show-div {
     height: 2.25rem;
@@ -29,10 +31,34 @@
 }
 
 .pichart-section {
+    position: relative;
     background-color: white;
     margin: 1rem 2rem;
     padding: .25rem;
     border-radius: .75rem;
+}
+
+.nav-buttons {
+    position: absolute;
+    background-color: var(--light-blue-color);
+    padding: 1rem;
+    top: 50%;
+    border-radius: .78rem;
+    outline: none;
+    border: none;
+}
+
+.nav-buttons:hover {
+    background-color: white;
+    border: 1px solid var(--light-blue-color);
+}
+
+.nav-buttons.next-button {
+    right: 1rem;
+}
+
+.nav-buttons.prev-button {
+    left: 1rem; 
 }
 
 .chart-title {
