@@ -233,7 +233,6 @@
 }
 .column2 {
     width: 3rem;
-    background: var(--orange-color);
     border-radius: 5px 5px 0 0;
     position: relative;
     bottom: 0;
@@ -244,14 +243,17 @@
 .column2:nth-child(1) {
     height: 80%;
     animation-delay: 0s;
+    background: var(--orange-color);
 }
 .column2:nth-child(2) {
     height: 60%;
     animation-delay: 0.2s;
+    background: var(--chart-color-yellow);
 }
 .column2:nth-child(3) {
     height: 40%;
     animation-delay: 0.4s;
+    background: var(--chart-color-blue);
 }
 .column2-label {
     text-align: center;
