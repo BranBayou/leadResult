@@ -9,7 +9,6 @@
     <title>CRM-Tasks-Chart</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="crmtasksstyle.css">
-    <link rel="stylesheet" href="crmtaskschart.css">
     <link rel="stylesheet" href="generateCrm.css">
 </head>
 <body>
@@ -136,16 +135,45 @@
         </header>
         
         <section class="main-section-top">
-            <h1>Reports</h1>
+            <h1>Campaigns</h1>
             <div class="main-section-buttons-div">
-                <button class="main-section-button-search">Task Stats</button>
-                <button class="main-section-button-tasks">Task Charts</button>
-                <button class="main-section-button-search">Unified Reports</button>
-                <button class="main-section-button-search">Success Reports</button>
-                <button class="main-section-button-manual">Call Details</button>
+                <div class="">
+                    <button class="main-section-button-search">Manage CRM Messages</button>
+                    <button class="main-section-button-tasks">Generate CRM Campaigns</button>
+                </div>
+                <div class="add-message-button-div">
+                    <a href="#">
+                        <span>Add New Message</span>
+                        <img src="assets/plusIcon.svg" alt="plus-icon">
+                    </a>
+                </div>
             </div>
         </section>
 
+        <section class="campaign-section">
+            <div class="show-campaign-step">
+                <div class="show-campaign-step-number">
+                    <span class="active">1</span>
+                    <span class="">2</span>
+                    <span class="">3</span>
+                    <span class="">4</span>
+                    <span class="">5</span>
+                </div>
+                <div class="show-campaign-step-text">
+                    <p>Choose a Message</p>
+                    <p>Select Operators</p>
+                    <p>Upload Data File</p>
+                    <p>Upload Result Summary</p>
+                    <p>Process Completed</p>
+                </div>
+            </div>
+
+            <div class="campaign-div">
+                <div>
+                    <h1>Choose a message below on basis of a New Campaign or Click on Add button to create a New Message</h1>
+                </div>
+            </div>
+        </section>
 
     </main>
     <!-- Main Content Ends-->

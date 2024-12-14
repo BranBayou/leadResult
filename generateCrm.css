@@ -1,0 +1,90 @@
+:root {
+    --blue-color: #25A0DB;
+    --gray-color: #f6f8fa;
+}
+
+.main-section-buttons-div {
+    justify-content: space-between;    
+}
+
+.add-message-button-div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.add-message-button-div a {
+    display: flex;
+    align-items: center;
+    color: var(--blue-color);
+    gap: 1rem;
+    text-decoration: none;
+    font-size: .87rem;
+    font-weight: 600;
+}
+
+.campaign-section {
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.show-campaign-step,
+.campaign-div {
+    background-color: white;
+}
+
+.show-campaign-step {
+    width: 15.71%;
+}
+
+.campaign-div {
+    width: 84.29%;
+}
+
+.show-campaign-step {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    border-radius: .75rem;
+}
+
+.show-campaign-step-number {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.show-campaign-step-number span {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid var(--gray-color);
+    border-radius: 50%;
+    font-size: .75rem;
+    color: #737373;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-campaign-step-number .active {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+
+.show-campaign-step-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.show-campaign-step-text p {
+    font-size: .75rem;
+    font-weight: 500;
+    color: #737373;
+    height: 1.5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
