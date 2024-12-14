@@ -1,6 +1,7 @@
 :root {
     --blue-color: #25A0DB;
     --gray-color: #f6f8fa;
+    --dark-gray-color: #e5e5e5;
 }
 
 .main-section-buttons-div {
@@ -26,7 +27,6 @@
 .campaign-section {
     padding: 0 2rem;
     display: flex;
-    align-items: center;
     gap: 2rem;
 }
 
@@ -48,6 +48,7 @@
     align-items: center;
     padding: 1.5rem 1rem;
     border-radius: .75rem;
+    gap: .75rem;
 }
 
 .show-campaign-step-number {
@@ -59,7 +60,7 @@
 .show-campaign-step-number span {
     width: 1.5rem;
     height: 1.5rem;
-    border: 1px solid var(--gray-color);
+    background-color: var(--dark-gray-color);
     border-radius: 50%;
     font-size: .75rem;
     color: #737373;
@@ -71,6 +72,9 @@
 .show-campaign-step-number .active {
     background-color: var(--blue-color);
     color: var(--white-color);
+}
+
+.show-campaign-step-number .active:hover {
 }
 
 .show-campaign-step-text {
