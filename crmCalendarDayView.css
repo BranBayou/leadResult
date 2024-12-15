@@ -43,9 +43,16 @@
     width: 2.25rem;
     height: 2.25rem;
     padding: .8rem;
+    border: none;
 }
 
 /* Table Styling */
+
+.day-view-table-wrpper {
+    padding: .25rem;
+    background-color: white;
+    border-radius: .75rem;
+}
 
 .appt-table-section {
     padding: 0 2rem;
@@ -60,7 +67,111 @@ th, td {
     border: 1px solid #ddd;
     text-align: left;
     word-wrap: break-word;
+    padding: .25rem;
 }
-th {
-    background-color: #f4f4f4;
+
+thead {
+    background-color: transparent !important;
 }
+
+/* table thead tr:first-child th div {
+    width: 4.5rem;
+} */
+
+/* .column-name.time {
+    width: 100%;
+} */
+
+.column-name {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray-color);
+    border-radius: .75rem;
+}
+
+.second-col-hd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 2rem;
+    margin: .5rem;
+}
+
+.second-col-hd p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-col-hd p .nums {
+    opacity: 100% !important;
+}
+
+.second-col-hd .name {
+    font-size: .68rem;
+    font-weight: 600;
+    opacity: .55;
+}
+
+/* Remove the bottom border from all th elements in the first row */
+table thead tr:nth-child(1) th {
+    border-bottom: none !important;
+}
+
+/* Remove the top border from all th elements in the second row */
+table thead tr:nth-child(2) th {
+    border-top: none !important;
+}
+
+
+/* table tbody tr:nth-child(1) td {
+    border-bottom: none !important;
+}
+
+table tbody tr:nth-child(2) td {
+    border-top: none !important;
+}
+
+table tbody tr:nth-child(2) td {
+    border-bottom: none !important;
+}
+
+table tbody tr:nth-child(3) td {
+    border-top: none !important;
+}
+
+table tbody tr:nth-child(3) td {
+    border-bottom: none !important;
+}
+
+table tbody tr:nth-child(4) td {
+    border-top: none !important;
+}
+
+table tbody tr:nth-child(4) td {
+    border-bottom: none !important;
+}
+
+table tbody tr:nth-child(5) td {
+    border-top: none !important;
+}
+
+table tbody tr:nth-child(5) td {
+    border-bottom: none !important;
+}
+
+table tbody tr:nth-child(6) td {
+    border-top: none !important;
+}
+
+table tbody tr:nth-child(6) td {
+    border-bottom: none !important;
+}
+
+table tbody tr:nth-child(7) td {
+    border-top: none !important;
+} */
