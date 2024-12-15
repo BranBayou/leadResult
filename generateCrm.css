@@ -127,6 +127,7 @@
 
 .information-div {
     width: 35rem;
+    margin-bottom: 1rem;
 }
 
 .information-div h1 {
@@ -134,13 +135,82 @@
     font-weight: 700;
 }
 
-/* Table Styling */
+.message-type-div {
+    display: flex;
+}
 
-.tabel-div thead tr {
+.message-type-div button{
+    height: 2.5rem;
+    padding: 0 1.5rem;
+    background-color: transparent;
+}
+
+.current-message {
+    font-size: .75rem;
+    font-weight: 700;
+    color: #999999;
+    border: none;
+}
+
+.previous-message {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-color);
+    border: none; /* Remove default borders */
+    border-top: 1px solid var(--dark-gray-color); /* Apply top border */
+    border-left: 1px solid var(--dark-gray-color); /* Apply left border */
+    border-right: 1px solid var(--dark-gray-color); /* Apply right border */
+    border-radius: .75rem .75rem 0 0; /* Round top-left and top-right corners */
+}
+
+/* Table Styling */
+.generateCrm-table {
+    width: 100%;
+    border-collapse: separate; /* Allow border-radius to work */
+    border-radius: .75rem !important;
+    padding: 0.25rem;
+    border: 1px solid var(--dark-gray-color);
+    overflow: hidden; /* Clip content to respect border-radius */
+    background-color: #fff; /* Optional to prevent cell backgrounds showing */
+}
+
+.generateCrm-table thead tr {
     height: 5.2rem;
 }
 
-.tabel-div tbody tr {
+.generateCrm-table tbody tr {
     height: 3rem;
-    border-bottom: 2px solid #EEEEEE;
 }
+
+tr {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--dark-gray-color);
+}
+
+.generateCrm-table td {
+    background-color: inherit;
+    border-bottom: 1px solid var(--dark-gray-color);
+}
+
+
+    /* Set column widths */
+    .generateCrm-table th:nth-child(1), 
+    .generateCrm-table td:nth-child(1) {
+        width: 38.58%;
+    }
+
+    .generateCrm-table th:nth-child(2), 
+    .generateCrm-table td:nth-child(2) {
+        width: 23.62%;
+    }
+
+    .generateCrm-table th:nth-child(3), 
+    .generateCrm-table td:nth-child(3) {
+        width: 23.62%;
+    }
+
+    .generateCrm-table th:nth-child(4), 
+    .generateCrm-table td:nth-child(4) {
+        width: 14.17%;
+    }
