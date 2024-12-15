@@ -1,3 +1,9 @@
+:root {
+    --blue-color: #25A0DB;
+    --gray-color: #f6f8fa;
+    --dark-gray-color: #e5e5e5;
+}
+
 .tob-bottom-div.month {
     padding-bottom: 0;
     padding-top: 1.5rem;
@@ -32,6 +38,7 @@
     justify-content: space-between;
     border-radius: 12.5rem;
     padding: 0 .5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 #month-display {
@@ -60,17 +67,52 @@ button {
 
 /** Monthly View Table Styling **/
 
+.table-wrapper {
+    padding: .25rem;
+    background-color: white;
+    border-radius: .75rem;
+}
+
 .calendar-table-month {
     background-color: white;
-    padding: .25rem;
     border-collapse: collapse;
+    border: 1px solid var(--dark-gray-color);
 }
 
 .calendar-table-month thead tr {
-    height: 5rem;
+    height: 3rem;
+    
 }
 
-.calendar-table-month thead tr th{
+table.calendar-table-month thead tr th{
     background-color: transparent;
+    text-align: center;
+    font-size: .87rem;
+    border-bottom: none !important;
+    padding: .25rem !important;
 }
 
+table.calendar-table-month tbody tr {
+    height: 5.5rem;
+}
+
+table.calendar-table-month tbody tr:first-child td {
+    border-top: none !important;
+}
+
+table.calendar-table-month tbody tr td {
+    vertical-align: top;
+}
+
+.day-cell {
+    position: relative;
+    font-size: .62rem;
+    line-height: .87rem;
+}
+
+.day {
+    position: absolute;
+    right: .5rem;
+    font-size: .87rem !important;
+    font-weight: 400;
+}
