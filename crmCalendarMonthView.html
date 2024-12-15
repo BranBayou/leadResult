@@ -145,28 +145,36 @@
                 </div>
             </div>
 
-            <div class="tob-bottom-div">
-                <div class="left-side-div">
-                    <p>Select Month</p>
-                    <div class="report-filter-div">
-                        <button id="prev-month">&lt;</button>
-                        <span id="month-display">December 2024</span>
-                        <button id="next-month">&gt;</button>
+            <div class="tob-bottom-div month">
+                <div class="left-side-div month">
+                    <div class="select-month-div">
+                        <p>Select Month</p>
+                        <div class="select-month-inner-div">
+                            <button id="prev-month"><img src="/assets/prevArrow.svg" alt="prevMonth"></button>
+                            <span id="month-display">December 2024</span>
+                            <button id="next-month"><img src="assets/nextArrow.svg" alt="nextMonth"></button>
+                        </div>
+                    </div>
+                    <div class="select-category-div">
+                        <p>Category</p>
+                        <div class="select-category-inner-div">
+                            <select name="" id="select-element">
+                                <option value="">All</option>
+                                <option value="">Category 1</option>
+                                <option value="">Category 2</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-                <div class="buttons-div">
-
+                <div class="buttons-div month">
                     <button id="reloadButton"><img src="assets/reloadIcon.svg" alt=""></button>
                 </div>
             </div>
         </section>
 
         <section class="appt-table-section">
-            <table class="calendar-table">
+            <table class="calendar-table-month">
                 <thead>
-                  <tr>
-                    <th colspan="7">December 2024</th>
-                  </tr>
                   <tr>
                     <th>Sunday</th>
                     <th>Monday</th>
@@ -224,7 +232,7 @@
                     <td class="day-cell"></td>
                   </tr>
                 </tbody>
-              </table>
+            </table>
         </section>
 
 
@@ -232,55 +240,54 @@
     <!-- Main Content Ends-->
     <script>
         // Month slide handler
-        // Month slide handler
 
-const previousMonthButton = document.getElementById('prev-month');
-const nextMonthButton = document.getElementById('next-month');
-const monthDisplay = document.getElementById('month-display'); // Select the month display element
+        const previousMonthButton = document.getElementById('prev-month');
+        const nextMonthButton = document.getElementById('next-month');
+        const monthDisplay = document.getElementById('month-display'); // Select the month display element
 
-let currentDate = new Date();
+        let currentDate = new Date();
 
-function updateMonthDisplay() {
-    const options = { year: 'numeric', month: 'long' };
-    monthDisplay.textContent = currentDate.toLocaleDateString('en-US', options); // Update month display
-}
-
-function prevMonth() {
-    currentDate.setMonth(currentDate.getMonth() - 1);
-    updateMonthDisplay();
-    slideMonth('prev');
-}
-
-function nextMonth() {
-    currentDate.setMonth(currentDate.getMonth() + 1);
-    updateMonthDisplay();
-    slideMonth('next');
-}
-
-function slideMonth(direction) {
-    if (direction === 'prev') {
-        monthDisplay.style.transform = 'translateX(100%)';
-    } else {
-        monthDisplay.style.transform = 'translateX(-100%)';
-    }
-
-    setTimeout(() => {
-        if (direction === 'prev') {
-            monthDisplay.style.transform = 'translateX(-100%)';
-        } else {
-            monthDisplay.style.transform = 'translateX(100%)';
+        function updateMonthDisplay() {
+            const options = { year: 'numeric', month: 'long' };
+            monthDisplay.textContent = currentDate.toLocaleDateString('en-US', options); // Update month display
         }
-    }, 0);
 
-    setTimeout(() => {
-        monthDisplay.style.transform = 'translateX(0)';
-    }, 500);
-}
+        function prevMonth() {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            updateMonthDisplay();
+            slideMonth('prev');
+        }
 
-previousMonthButton.addEventListener('click', prevMonth);
-nextMonthButton.addEventListener('click', nextMonth);
+        function nextMonth() {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            updateMonthDisplay();
+            slideMonth('next');
+        }
 
-updateMonthDisplay();  // Initialize the display
+        function slideMonth(direction) {
+            if (direction === 'prev') {
+                monthDisplay.style.transform = 'translateX(100%)';
+            } else {
+                monthDisplay.style.transform = 'translateX(-100%)';
+            }
+        
+            setTimeout(() => {
+                if (direction === 'prev') {
+                    monthDisplay.style.transform = 'translateX(-100%)';
+                } else {
+                    monthDisplay.style.transform = 'translateX(100%)';
+                }
+            }, 0);
+        
+            setTimeout(() => {
+                monthDisplay.style.transform = 'translateX(0)';
+            }, 500);
+        }
+
+        previousMonthButton.addEventListener('click', prevMonth);
+        nextMonthButton.addEventListener('click', nextMonth);
+
+        updateMonthDisplay();  // Initialize the display
 
     </script>
 </body>
