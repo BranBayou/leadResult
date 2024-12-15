@@ -49,6 +49,7 @@
     background-color: white;
     padding: 1rem;
     border-radius: .75rem;
+    max-height: 14.5rem;
   }
 
   .steps-container::before {
@@ -131,4 +132,15 @@
 .information-div h1 {
     font-size: 1.25rem;
     font-weight: 700;
+}
+
+/* Table Styling */
+
+.tabel-div thead tr {
+    height: 5.2rem;
+}
+
+.tabel-div tbody tr {
+    height: 3rem;
+    border-bottom: 2px solid #EEEEEE;
 }
