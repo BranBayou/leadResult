@@ -6,67 +6,75 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>CRM-Tasks-Chart</title>
+    <title>CRM-Calendar-Month-View</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="crmtasksstyle.css">
-    <link rel="stylesheet" href="crmCalendarDayView.css">
     <link rel="stylesheet" href="crmCalendarMonthView.css">
 </head>
 <body>
     <!-- Side Navbar Starts-->
     <div class="sidebar sidebar-only-icon">
-        <div class="sidebar-logo">
-            <a id="lbLogo" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbLogo&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                <img src="/assets/logoImage1.svg" alt="LeadResult-Logo" class="sidebar-logo-img">
-                <div class="logo-text-div">
-                    <h1 class="sidebar-logo-img sidebar-logo-img2 hidden">LeadResult</h1>
-                    <p class="sidebar-logo-img sidebar-logo-img2 hidden">DRIVING CUSTOMER RESPONSE</p>
-                </div>
-                <!-- <img class="sidebar-logo-img sidebar-logo-img2 hidden" src="/assets/logoImage2.svg" alt="LeadResult-Logo"> -->
-            </a>
-        </div>
-        <div class="menu">
-            <div class="selected-menu-item">
-                <a id="lbMenuItem1" title="Scheduling" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem1&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                    <img src="/assets/schedulingIcon.svg" class="menu-icon">
-                    <span class="menu-text hidden">Scheduling</span>
-                </a>
-                <div class="submenu">
-                    <a id="lbMenuItem5" title="Appointments" class="submenu-item icon-only-sub-menu" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem5&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                        <img src="assets/appt.svg" class="menu-icon">
-                        <span class="menu-text hidden">Appointments</span>
-                    </a>
-                    <a id="lbMenuItem7" title="Appointment Calendar" class="submenu-item icon-only-sub-menu" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem7&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                        <img src="assets/apptCal.svg" class="menu-icon">
-                        <span class="menu-text hidden">Appointment Calendar</span>
-                    </a>
+        <form name="" method="" action="" id="">
+            <div class="sidebar-logo">
+                <div id="lbLogo">
+                    <img src="/assets/logoImage1.svg" alt="LeadResult-Logo" class="sidebar-logo-img" />
+                    <div class="logo-text-div">
+                        <h1 class="sidebar-logo-img sidebar-logo-img2 hidden" style="opacity: 0; transition: opacity 0.3s">
+                            LeadResult
+                        </h1>
+                        <p class="sidebar-logo-img sidebar-logo-img2 hidden" style="opacity: 0; transition: opacity 0.3s">
+                            DRIVING CUSTOMER RESPONSE
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="menu-item">
-                <a id="lbMenuItem2" title="CRM" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem2&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                    <img src="assets/crm.svg" class="menu-icon">
-                    <span class="menu-text hidden">CRM</span>
-                </a>
+            <div class="menu">
+                <div class="menu-item">
+                    <a id="nScheduler" title="Scheduling" class="menu-link icon-only-menu" href='' data-target="smScheduler">
+                        <img class="menu-icon main-menu-icon" src="assets/oper2024Icons/dashboard-1.svg" style="border-width: 0px" />
+                        <span class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s;">Scheduling</span></a>
+                    <div id="smScheduler" class="submenu hidden2">
+                        <a id="nSchedulerSchedulerUnifiedSearch" title="Appointments"
+                            class="submenu-item icon-only-sub-menu" href=''>
+                            <img class="menu-icon sub-menu-icon" src="assets/oper2024Icons/appointmnt-1.svg" style="border-width: 0px" />
+                            <span class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Appointments</span></a>
+                        <a id="nSchedulerSchedulerAppointmentCalendar" title="Appointment Calendar"
+                            class="submenu-item icon-only-sub-menu" href=''>
+                            <img class="menu-icon sub-menu-icon" src="assets/oper2024Icons/apptstatus-1.svg" style="border-width: 0px" /><span
+                                class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Calendar</span></a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a id="nCRM" title="CRM" class="menu-link icon-only-menu" href='' data-target="smCRM">
+                        <img class="menu-icon main-menu-icon" src="assets/oper2024Icons/crm-1.svg" style="border-width: 0px" /><span
+                            class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">CRM</span></a>
+                    <div id="smCRM" class="submenu hidden2">
+                        <a id="nCRMCRMTasks" title="Tasks" class="submenu-item icon-only-sub-menu"
+                            href=''><img
+                                class="menu-icon sub-menu-icon" src="assets/oper2024Icons/Tasks-1.svg" style="border-width: 0px" /><span
+                                class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Tasks</span></a>
+                        <a id="nCRMCRMReports" title="Reports" class="submenu-item icon-only-sub-menu"
+                            href=''><img
+                                class="menu-icon sub-menu-icon" src="assets/oper2024Icons/Reports-1.svg" style="border-width: 0px" /><span
+                                class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Reports</span></a>
+                    </div>
+                </div>
+                <div class="menu-item" data-target="">
+                    <a id="nTextPro" title="Text Pro" class="menu-link icon-only-menu"href=''>
+                        <img class="menu-icon main-menu-icon" src="assets/oper2024Icons/text_pro-1.svg" style="border-width: 0px" /><span
+                            class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Text Pro</span></a>
+                </div>
+                <div class="menu-item" data-target="">
+                    <a id="nSchedulerDNC" title="DNC" class="menu-link icon-only-menu" href=''>
+                        <img class="menu-icon main-menu-icon" src="assets/oper2024Icons/dnc-1.svg" style="border-width: 0px" /><span
+                            class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">DNC</span></a>
+                </div>
+                <div class="menu-item" data-target="">
+                    <a id="nLogout" title="Logout" class="menu-link icon-only-menu" href=''>
+                        <img class="menu-icon main-menu-icon" src="assets/oper2024Icons/Logout-1.svg" style="border-width: 0px" /><span
+                            class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Logout</span></a>
+                </div>
             </div>
-            <div class="menu-item">
-                <a id="lbMenuItem3" title="Text Pro" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem3&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                    <img src="assets/marketing.svg" class="menu-icon">
-                    <span class="menu-text hidden">Text Pro</span>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a id="lbMenuItem8" title="DNC" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem8&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                    <img src="assets/dnc.svg" class="menu-icon">
-                    <span class="menu-text hidden">DNC</span>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a id="lbMenuItem15" title="Logout" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem15&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                    <img src="assets/logout.svg" class="menu-icon">
-                    <span class="menu-text hidden">Logout</span>
-                </a>
-            </div>
-        </div>
+        </form>
     </div>
     <!-- Side Navbar Ends-->
 
