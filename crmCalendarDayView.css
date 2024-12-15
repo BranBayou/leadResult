@@ -11,9 +11,34 @@
     padding: 1rem 0; /* 16px */
 }
 
+.report-filter-div {
+    background-color: white;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    width: 14.3rem;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    border-radius: 12rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.report-filter-div input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
 .left-side-div {
     display: flex;
+    align-items: center;
     gap: 1rem;
+}
+
+.left-side-div p {
+    font-size: .78rem;
+    font-weight: 700;
+    opacity: .6;
 }
 
 .buttons-div {
@@ -89,6 +114,8 @@ thead {
     justify-content: center;
     background-color: var(--gray-color);
     border-radius: .75rem;
+    font-size: .87rem;
+    font-weight: 700;
 }
 
 .second-col-hd {
@@ -128,7 +155,7 @@ table thead tr:nth-child(2) th {
 }
 
 
-/* table tbody tr:nth-child(1) td {
+table tbody tr:nth-child(1) td {
     border-bottom: none !important;
 }
 
@@ -174,4 +201,63 @@ table tbody tr:nth-child(6) td {
 
 table tbody tr:nth-child(7) td {
     border-top: none !important;
-} */
+}
+
+.related-person-div {
+    display: flex;
+    gap: .5rem;
+    padding: .5rem;
+}
+
+.related-person {
+    height: 2.5rem;
+    background-color: #FFF6E8;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    border: 1px solid #F6E0BB;
+    font-size: .68rem;
+    font-weight: 400;
+    line-height: .87rem;
+}
+
+.related-other-div {
+    display: flex;
+    gap: .5rem;
+    padding: .5rem;
+}
+
+.related-other {
+    height: 2.5rem;
+    background-color: #EAEAEA;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    border: 1px solid #CBCBCB;
+    font-size: .68rem;
+    font-weight: 400;
+    line-height: .87rem;
+}
+
+/* related-person-div-second */
+.related-person-second {
+    width: 50% !important;
+}
+/* related-other-div-second */
+.related-other-second {
+    width: 50% !important;
+}
+
+.show-time {
+    font-size: .75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: .12rem;
+    height: 2rem;
+}
+
+.show-time sub {
+    font-size: 11px;
+}

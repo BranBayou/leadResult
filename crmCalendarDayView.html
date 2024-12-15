@@ -148,8 +148,8 @@
                 <div class="left-side-div">
                     <p>Success report for</p>
                     <div class="report-filter-div">
-                        <input type="text" name="" id="" placeholder="Select Date & Time">
-                        <img src="assets/calendar.svg" alt="">
+                        <input type="date" name="" id="" placeholder="Select Date & Time">
+                        <!-- <img src="assets/calendar.svg" alt=""> -->
                     </div>
                 </div>
                 <div class="buttons-div">
@@ -165,13 +165,13 @@
                 <table>
                     <thead>
                         <tr>
-                            <th><div class="column-name time">Time</div></th>
-                            <th colspan="4"><div class="column-name person">Phillipsburg Easton Honda</div></th>
-                            <th colspan="4"><div class="column-name other">Other</div></th>
+                            <th style="width: 5.23%;"><div class="column-name time">Time</div></th>
+                            <th style="width: 47.385%;"><div class="column-name person">Phillipsburg Easton Honda</div></th>
+                            <th style="width: 47.385%;"><div class="column-name other">Other</div></th>
                         </tr>
                         <tr>
                             <th></th>
-                            <th colspan="4">
+                            <th>
                                 <div class="second-col-hd">
                                     <p><span class="nums">13</span><span class="name">Appts</span></p>
                                     <p><span class="nums">1.0</span><span class="name">Hours</span></p>
@@ -179,7 +179,7 @@
                                     <p><span class="nums">3</span><span class="name">Loaners</span></p>
                                 </div>
                             </th>
-                            <th colspan="4">
+                            <th>
                                 <div class="second-col-hd">
                                     <p><span class="nums">13</span><span class="name">Appts</span></p>
                                     <p><span class="nums">1.0</span><span class="name">Hours</span></p>
@@ -191,42 +191,113 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>7:00 AM</td>
-                            <td colspan="4">Silva, Laurentina 2023 Honda Accord<br>Espinoza, Pamela 2021 Honda HR-V<br>Sagastume, QUIRA 2020 Honda Accord</td>
-                            <td colspan="4">Silva, Laurentina 2023 Honda Accord<br>Espinoza, Pamela 2021 Honda HR-V<br>Sagastume, QUIRA 2020 Honda Accord</td>
+                            <td><div class="show-time">7:00 <sub>AM</sub></div></td>
+                            <td>
+                                <div class="related-person-div">
+                                    <div class="related-person">Silva, Laurentina 2023 Honda Accord</div>
+                                    <div class="related-person">Espinoza, Pamela 2021 Honda HR-V</div>
+                                    <div class="related-person">Sagastume, QUIRA 2020 Honda Accord</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="related-other-div">
+                                    <div class="related-other">Silva, Laurentina 2023 Honda Accord</div>
+                                    <div class="related-other">Espinoza, Pamela 2021 Honda HR-V</div>
+                                    <div class="related-other">Sagastume, QUIRA 2020 Honda Accord</div>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
-                            <td>7:30 AM</td>
-                            <td colspan="4">Zukowski, Lisa 2013 Honda Civic<br>Clouser, Deb 2021 Honda Pilot</td>
-                            <td colspan="4">Zukowski, Lisa 2013 Honda Civic<br>Clouser, Deb 2021 Honda Pilot</td>
+                            <td><div class="show-time">7:30 <span>AM</span></div></td>
+                            <td>
+                                <div class="related-person-div related-person-div-second">
+                                    <div class="related-person related-person-second">Zukowski, Lisa 2013 Honda Civic</div>
+                                    <div class="related-person related-person-second">Clouser, Deb 2021 Honda Pilot</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="related-other-div related-other-div-second">
+                                    <div class="related-other related-other-second">Zukowski, Lisa 2013 Honda Civic</div>
+                                    <div class="related-other related-other-second">Clouser, Deb 2021 Honda Pilot</div>
+                                </div>
+                            </td>
+                            
                         </tr>
                         <tr>
-                            <td>8:00 AM</td>
-                            <td colspan="4">Raskin, Alan 2020 Honda Pilot</td>
-                            <td colspan="4">Raskin, Alan 2020 Honda Pilot</td>
+                            <td><div class="show-time">8:00 <span>AM</span></div></td>
+                            <td>
+                                <div class="related-person-div">
+                                    <div class="related-person" style="width: 100%;">Raskin, Alan 2020 Honda Pilot</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="related-other-div">
+                                    <div class="related-other" style="width: 100%;">Raskin, Alan 2020 Honda Pilot</div>
+                                </div>
+                            </td>                            
                         </tr>
                         <tr>
-                            <td>8:30 AM</td>
-                            <td colspan="4"></td>
-                            <td colspan="4"></td>
+                            <td><div class="show-time">8:30 <span>AM</span></div></td>
+                            <td>
+                                <div class="related-person-div">
+                                    <div class="related-person" style="min-width: 100%;">
+
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="">
+                                    <div class="related-other-div">
+                                        <div class="related-other" style="min-width: 100%;">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
-                            <td>9:00 AM</td>
-                            <td colspan="4">Marino, Becky 2023 Honda CR-V</td>
-                            <td colspan="4">Marino, Becky 2023 Honda CR-V</td>
+                            <td><div class="show-time">9:00 <span>AM</span></div></td>
+                            <td>
+                                <div class="related-person-div">
+                                    <div class="related-person" style="width: 100%;">Marino, Becky 2023 Honda CR-V</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="related-other-div">
+                                    <div class="related-other" style="width: 100%;">Marino, Becky 2023 Honda CR-V</div>
+                                </div>
+                            </td>                            
                         </tr>
                         <tr>
-                            <td>9:30 AM</td>
-                            <td colspan="4">Zukowski, Lisa 2013 Honda Civic<br>Clouser, Deb 2021 Honda Pilot</td>
-                            <td colspan="4">Zukowski, Lisa 2013 Honda Civic<br>Clouser, Deb 2021 Honda Pilot</td>
+                            <td><div class="show-time">9:30 <span>AM</span></div></td>
+                            <td>
+                                <div class="related-person-div">
+                                    <div class="related-person related-person-second">Zukowski, Lisa 2013 Honda Civic</div>
+                                    <div class="related-person related-person-second">Clouser, Deb 2021 Honda Pilot</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="related-other-div">
+                                    <div class="related-other related-other-second">Zukowski, Lisa 2013 Honda Civic</div>
+                                    <div class="related-other related-other-second">Clouser, Deb 2021 Honda Pilot</div>
+                                </div>
+                            </td>                            
                         </tr>
                         <tr>
-                            <td>10:00 AM</td>
-                            <td colspan="4">Raskin, Alan 2020 Honda Pilot</td>
-                            <td colspan="4">Raskin, Alan 2020 Honda Pilot</td>
+                            <td><div class="show-time">10:00 <span>AM</span></div></td>
+                            <td>
+                                <div class="related-person-div">
+                                    <div class="related-person" style="width: 100%;">Raskin, Alan 2020 Honda Pilot</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="related-other-div">
+                                    <div class="related-other" style="width: 100%;">Raskin, Alan 2020 Honda Pilot</div>
+                                </div>
+                            </td>                            
                         </tr>
                     </tbody>
-                </table>
+                </table>  
             </div>
         </section>
     </main>
