@@ -82,3 +82,4 @@ nextButton.addEventListener('click', () => {
 prevButton.addEventListener('click', () => {
   chartsDiv.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
 });
+
