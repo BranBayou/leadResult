@@ -85,9 +85,9 @@ main {
     width: 1rem;
   }
 
-  .crm-nav-con .scheduling-nav-inner-div button:hover {
+  /* .crm-nav-con .scheduling-nav-inner-div button:hover {
     background: var(--dark-color);
-  } 
+  }  */
 
   .crm-nav-con {
     width: 100%;
