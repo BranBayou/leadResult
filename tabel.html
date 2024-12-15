@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Table</title>
+    <title>Appointment Table</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
         }
         table {
-            width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            table-layout: fixed;
         }
         th, td {
-            padding: 10px;
-            text-align: left;
             border: 1px solid #ddd;
+            text-align: left;
+            padding: 8px;
+            word-wrap: break-word;
         }
         th {
             background-color: #f4f4f4;
@@ -26,63 +25,62 @@
         tr:nth-child(even) {
             background-color: #f9f9f9;
         }
-        tr:hover {
-            background-color: #f1f1f1;
-        }
-        .filter-input {
-            width: 90%;
-            padding: 5px;
-            margin-top: 5px;
-            box-sizing: border-box;
-        }
     </style>
 </head>
 <body>
     <table>
         <thead>
             <tr>
-                <th>Name<br><input type="text" class="filter-input" placeholder="Filter by Name"></th>
-                <th>Category<br><input type="text" class="filter-input" placeholder="Filter by Category"></th>
-                <th>Create Date<br><input type="text" class="filter-input" placeholder="Filter by Date"></th>
-                <th>Preview<br><input type="text" class="filter-input" placeholder="Filter by Preview"></th>
+                <th rowspan="2">Time</th>
+                <th colspan="4">Phillipsburg Easton Honda</th>
+                <th colspan="4">Other</th>
+            </tr>
+            <tr>
+                <th>Appts</th>
+                <th>Hours</th>
+                <th>Walters</th>
+                <th>Loaners</th>
+                <th>Appts</th>
+                <th>Hours</th>
+                <th>Walters</th>
+                <th>Loaners</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>MM BCM</td>
-                <td>Service</td>
-                <td>9/19/2024 · 11:45:43 AM</td>
-                <td></td>
+                <td>7:00 AM</td>
+                <td colspan="4">Silva, Laurentina 2023 Honda Accord<br>Espinoza, Pamela 2021 Honda HR-V<br>Sagastume, QUIRA 2020 Honda Accord</td>
+                <td colspan="4">Silva, Laurentina 2023 Honda Accord<br>Espinoza, Pamela 2021 Honda HR-V<br>Sagastume, QUIRA 2020 Honda Accord</td>
             </tr>
             <tr>
-                <td>Latch</td>
-                <td>Service</td>
-                <td>9/19/2024 · 11:45:43 AM</td>
-                <td></td>
+                <td>7:30 AM</td>
+                <td colspan="4">Zukowski, Lisa 2013 Honda Civic<br>Clouser, Deb 2021 Honda Pilot</td>
+                <td colspan="4">Zukowski, Lisa 2013 Honda Civic<br>Clouser, Deb 2021 Honda Pilot</td>
             </tr>
             <tr>
-                <td>Fakra Cable</td>
-                <td>Service</td>
-                <td>9/19/2024 · 11:45:43 AM</td>
-                <td></td>
+                <td>8:00 AM</td>
+                <td colspan="4">Raskin, Alan 2020 Honda Pilot</td>
+                <td colspan="4">Raskin, Alan 2020 Honda Pilot</td>
             </tr>
             <tr>
-                <td>EPS</td>
-                <td>Service</td>
-                <td>9/19/2024 · 11:45:43 AM</td>
-                <td></td>
+                <td>8:30 AM</td>
+                <td colspan="4"></td>
+                <td colspan="4"></td>
             </tr>
             <tr>
-                <td>SW Update</td>
-                <td>Service</td>
-                <td>9/19/2024 · 11:45:43 AM</td>
-                <td></td>
+                <td>9:00 AM</td>
+                <td colspan="4">Marino, Becky 2023 Honda CR-V</td>
+                <td colspan="4">Marino, Becky 2023 Honda CR-V</td>
             </tr>
             <tr>
-                <td>PGM</td>
-                <td>Service</td>
-                <td>9/19/2024 · 11:45:43 AM</td>
-                <td></td>
+                <td>9:30 AM</td>
+                <td colspan="4">Zukowski, Lisa 2013 Honda Civic<br>Clouser, Deb 2021 Honda Pilot</td>
+                <td colspan="4">Zukowski, Lisa 2013 Honda Civic<br>Clouser, Deb 2021 Honda Pilot</td>
+            </tr>
+            <tr>
+                <td>10:00 AM</td>
+                <td colspan="4">Raskin, Alan 2020 Honda Pilot</td>
+                <td colspan="4">Raskin, Alan 2020 Honda Pilot</td>
             </tr>
         </tbody>
     </table>

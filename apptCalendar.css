@@ -44,3 +44,27 @@
     height: 2.25rem;
     padding: .8rem;
 }
+
+/* Table Styling */
+
+.appt-table-section {
+    padding: 0 2rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+    word-wrap: break-word;
+}
+th {
+    background-color: #f4f4f4;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
