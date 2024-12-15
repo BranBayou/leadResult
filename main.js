@@ -83,3 +83,16 @@ prevButton.addEventListener('click', () => {
   chartsDiv.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
 });
 
+const dateInput = document.getElementById('date-picker');
+
+    dateInput.addEventListener('focus', () => {
+        // Change input type to date on focus
+        dateInput.type = 'date';
+    });
+
+    dateInput.addEventListener('blur', () => {
+        // Reset type back to text if the value is empty
+        if (!dateInput.value) {
+            dateInput.type = 'text';
+        }
+    });

@@ -89,6 +89,10 @@ main {
     background: var(--dark-color);
   }  */
 
+  .filter-Icon {
+    width: .8rem;
+  }
+
   .crm-nav-con {
     width: 100%;
   }

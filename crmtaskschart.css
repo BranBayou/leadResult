@@ -79,6 +79,17 @@
     opacity: .6;
 }
 
+input[type="text"]::placeholder {
+    font-size: 0.81rem;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif !important;
+}
+
+input {
+    width: 100% !important;
+}
+
+
 /* PI Chart Section */
 
 .charts-div {
