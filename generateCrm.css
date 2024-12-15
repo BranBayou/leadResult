@@ -24,6 +24,16 @@
     font-weight: 600;
 }
 
+.message-control-bettons {
+    display: flex;
+    gap: 1rem;
+}
+
+.message-control-bettons button {
+    width: 13.5rem;
+    padding: 0 1rem;
+}
+
 .campaign-section {
     padding: 0 2rem;
     display: flex;
@@ -58,7 +68,7 @@
     top: .5rem;
     left: .7rem;
     width: 2px;
-    height: 80%;
+    height: 78%;
     background-color: var(--dark-gray-color);
     margin: 1rem;
   }
@@ -163,7 +173,21 @@
     border-radius: .75rem .75rem 0 0; /* Round top-left and top-right corners */
 }
 
+.col-name {
+    font-size: .62rem;
+    font-weight: 700;
+}
+
 /* Table Styling */
+
+.filter-div {
+    display: flex;
+    background-color: white;
+    margin-top: .5rem;
+    padding: .5rem .5rem;
+    border-radius: .62rem;
+}
+
 .generateCrm-table {
     width: 100%;
     border-collapse: separate; /* Allow border-radius to work */
@@ -180,6 +204,11 @@
 
 .generateCrm-table tbody tr {
     height: 3rem;
+}
+
+.generateCrm-table tbody tr td {
+    font-size: .81rem;
+    font-weight: 400;
 }
 
 tr {
