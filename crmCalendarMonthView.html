@@ -138,9 +138,9 @@
         <section class="main-section-top">
             <h1>Appointment Calendar</h1>
             <div class="main-section-buttons-div">
-                <div class="">
+                <div class="top-button-navs">
                     <button class="main-section-button-search">List View</button>
-                    <button class="main-section-button-tasks">Day View</button>
+                    <button class="main-section-button-search">Day View</button>
                     <button class="main-section-button-tasks">Month View</button>
                 </div>
             </div>
@@ -177,58 +177,135 @@
                 <table class="calendar-table-month">
                     <thead>
                         <tr>
-                            <th>Sunday</th>
-                            <th>Monday</th>
-                            <th>Tuesday</th>
-                            <th>Wednesday</th>
-                            <th>Thursday</th>
-                            <th>Friday</th>
-                            <th>Saturday</th>
+                            <th>
+                                <div class="weekday">Sunday</div>
+                            </th>
+                            <th>
+                                <div class="weekday">Monday</div>
+                            </th>
+                            <th>
+                                <div class="weekday">Tuesday</div>
+                            </th>
+                            <th>
+                                <div class="weekday">Wednesday</div>
+                            </th>
+                            <th>
+                                <div class="weekday">Thursday</div>
+                            </th>
+                            <th>
+                                <div class="weekday">Friday</div>
+                            </th>
+                            <th>
+                                <div class="weekday">Saturday</div>
+                            </th>
                         </tr>
-                    </thead>
+                    </thead>                    
                     <tbody>
                         <tr>
-                            <td class="day-cell"><span class="day">29</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">30</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">1</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">2</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">3</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">4</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">5</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
+                            <td class="day-cell"><span class="day">29</span></td>
+                            <td class="day-cell"><span class="day">30</span></td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">1</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">2</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">3</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">4</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">5</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            
                         </tr>
                         <tr>
-                            <td class="day-cell"><span class="day">6</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">7</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">8</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">9</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">10</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">11</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">12</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">6</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">7</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">8</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">9</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">10</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">11</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">12</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>                            
                         </tr>
                         <tr>
-                            <td class="day-cell"><span class="day">13</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">14</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">15</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">16</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">17</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">18</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">19</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">13</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">14</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">15</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">16</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">17</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">18</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">19</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>                            
                         </tr>
                         <tr>
-                            <td class="day-cell"><span class="day">20</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">21</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">22</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">23</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">24</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">25</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">26</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">20</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">21</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">22</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">23</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">24</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">25</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">26</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>                            
                         </tr>
                         <tr>
-                            <td class="day-cell"><span class="day">27</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">28</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">29</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">30</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
-                            <td class="day-cell"><span class="day">31</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">27</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">28</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">29</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">30</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>
+                            <td class="day-cell">
+                                <div class="has-appt"><span class="day">31</span>Appts: 13<br>Hours: 1.0<br>Walters: 5<br>Loaners: 3</div>
+                            </td>                            
                             <td class="day-cell"></td>
                             <td class="day-cell"></td>
                         </tr>

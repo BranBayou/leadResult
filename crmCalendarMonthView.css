@@ -4,6 +4,18 @@
     --dark-gray-color: #e5e5e5;
 }
 
+.top-button-navs {
+    display: flex;
+    gap: 1rem;
+}
+
+.top-button-navs button:nth-child(3) {
+    background-color: var(--orange-color);
+    color: var(--white-color);
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+    opacity: 100%;
+}
+
 .tob-bottom-div.month {
     padding-bottom: 0;
     padding-top: 1.5rem;
@@ -85,7 +97,7 @@ button {
 }
 
 table.calendar-table-month thead tr th{
-    background-color: transparent;
+    background-color: white;
     text-align: center;
     font-size: .87rem;
     border-bottom: none !important;
@@ -102,6 +114,13 @@ table.calendar-table-month tbody tr:first-child td {
 
 table.calendar-table-month tbody tr td {
     vertical-align: top;
+    padding: .13rem;
+}
+
+.weekday {
+    background-color: var(--gray-color);
+    padding: 1rem 0;
+    border-radius: .62rem;
 }
 
 .day-cell {
@@ -112,7 +131,14 @@ table.calendar-table-month tbody tr td {
 
 .day {
     position: absolute;
-    right: .5rem;
+    right: 1rem;
     font-size: .87rem !important;
     font-weight: 400;
+}
+
+.has-appt {
+    background-color: #fff7e9;
+    height: 5.5rem !important;
+    width: 100%;
+    padding: .5rem;
 }
