@@ -42,14 +42,14 @@ body span {
 
 /* Nav section Styling */
 
-.logo-div {
+.sidebar-logo {
   height: 3.5rem;
   border-bottom: 1px solid var(--bar-color-dard-op);
   margin-bottom: 1rem;
   text-align: center;
 }
 
-nav {
+.sidebar {
   width: 16.94%;
   padding: 1rem;
   background-color: var(--dark-color);
@@ -57,60 +57,56 @@ nav {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
-.scheduling-nav-con {
-  background-color: var(--nav-bg-color) ;
-  border-radius: .87rem;
-  margin: 0 0 .25rem 0;
-}
-
-.scheduling-nav .scheduling-button {
-  width: 100%;
-  background-color: var(--blue-color);
-  height: 3rem;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  border: none;
-  outline: none;
-  border-radius: .8rem;
-  color: var(--white-color);
+.menu .menu-item {
   padding: 0 1rem;
 }
 
-.scheduling-nav .scheduling-button span {
-  font-size: .87rem;
-  line-height: 2rem;
+.menu .menu-item:hover {
+  background-color: var(--nav-bg-color);
+  border-radius: .75rem;
 }
 
-.scheduling-nav-inner-div {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding-bottom: .25rem;
-}
-
-.scheduling-nav-inner-div button {
-  border: none;
-  outline: none;
-  background-color: transparent;
+.menu .menu-item a {
+  display: block;
+  height: 3rem;
   color: var(--white-color);
-  height: 2.5rem;
-  padding: 0 3rem;
-  width: 100%;
+  text-decoration: none;
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 1rem;
+  font-size: .87rem;
 }
 
-.scheduling-nav-inner-div button span {
+.menu .selected-menu-item {
+  background-color: var(--nav-bg-color);
+  border-radius: .75rem;
+  margin: .12rem;
+  font-size: .87rem;
+}
+
+.menu .selected-menu-item a {
+  height: 3rem;
+  display: block;
+  color: var(--white-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu .selected-menu-item .menu-link {
+  background-color: var(--blue-color);
+  padding: 0 1rem;
+  border-radius: .75rem;
+}
+
+.menu .selected-menu-item .submenu-item {
+  padding-left: 3rem;
   font-size: .75rem;
+  position: relative;
 }
 
-.has-bottom {
-  position: relative;
-} 
-
-.has-bottom::after {
+.menu .selected-menu-item .submenu-item::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -121,54 +117,6 @@ nav {
   width: 90%;
   background-color: rgba(255, 255, 255, .08);
 }
-
-.scheduling-nav-inner-div button:hover {
-  background: var(--dark-color);
-  border-radius: .87rem;
-}
-
-.crm-nav-con {
-  width: 100%;
-}
-
-.crm-nav-con button,
-.dirve-nav-con button,
-.marketing-nav-con button,
-.dnc-nav-con button,
-.settings-nav-con button,
-.logout-nav-con button {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  height: 3rem;
-  color: var(--font-color);
-  width: 100%;
-  padding: 0 1rem;
-  font-size: .87rem;
-}
-
-.scheduling-nav .scheduling-button img,
-.crm-nav-con button img,
-.dirve-nav-con button img,
-.marketing-nav-con button img,
-.dnc-nav-con button img,
-.settings-nav-con button img,
-.logout-nav-con button img{
-  width: 1.4rem;
-}
-
-.crm-nav-con button:hover,
-.dirve-nav-con button:hover,
-.marketing-nav-con button:hover,
-.dnc-nav-con button:hover,
-.settings-nav-con button:hover,
-.logout-nav-con button:hover {
-  background-color: var(--nav-bg-color);
-  border-radius: .87rem;
- }
 
 /* Main section styling */
 

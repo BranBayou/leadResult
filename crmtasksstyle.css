@@ -97,8 +97,12 @@ main {
     width: 100%;
   }
 
+  .scheduling-nav-inner-div a  {
+    padding: 1rem;
+  }
+
   .crm-nav-con .scheduling-button {
-    background-color: var(--blue-color);
+    /* background-color: var(--blue-color); */
     border-radius: .87rem;
   }
 

@@ -11,96 +11,57 @@
 </head>
 <body>
     <!-- Side Navbar Starts-->
-    <nav>
-        <!-- Logo Div Starts-->
-        <div class="logo-div">
-            <img src="assets/logoImage1.svg" alt="LeadResult-Logo">
-            <img src="assets/logoImage2.svg" alt="LeadResult-Logo">
+    <div class="sidebar">
+        <div class="sidebar-logo">
+            <a id="lbLogo" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbLogo&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                <img src="/assets/logoImage1.svg" alt="LeadResult-Logo" class="sidebar-logo-img">
+                <img class="sidebar-logo-img hidden" src="/assets/logoImage2.svg" alt="LeadResult-Logo">
+            </a>
         </div>
-        <!-- Logo Div Ends-->
-        <!-- <div class="separator-div">
-            <img src="assets/separator.svg" alt="separatorImg">
-        </div> -->
-        <!-- Nav Div Starts-->
-        <div class="nav-div">
-            <div class="scheduling-nav">
-                <div class="scheduling-nav-con">
-                    <button class="scheduling-button">
-                        <img src="assets/schedulingIcon.svg" alt="schedulingIcon">
-                        <span>Scheduling</span>
-                    </button>
-                    <div class="scheduling-nav-inner-div">
-                        <button class="has-bottom">
-                            <img src="assets/appt.svg" alt="">
-                            <span>Appointments </span>
-                        </button>
-                        <!-- <div class="inner-separator-div">
-                            <img src="assets/innerLine.svg" alt="lineSeparator">
-                        </div> -->
-                        <button class="has-bottom">
-                            <img src="assets/apptCal.svg" alt="">
-                            <span>Appt. Calander</span>
-                        </button>
-                        <!-- <div class="inner-separator-div">
-                            <img src="assets/innerLine.svg" alt="lineSeparator">
-                        </div> -->
-                        <button class="">
-                            <img src="assets/admin.svg" alt="">
-                            <span>Admin</span>
-                        </button>
-                    </div>
+        <div class="menu">
+            <div class="selected-menu-item">
+                <a id="lbMenuItem1" title="Scheduling" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem1&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                    <img src="/assets/schedulingIcon.svg" class="menu-icon">
+                    <span class="menu-text hidden">Scheduling</span>
+                </a>
+                <div class="submenu">
+                    <a id="lbMenuItem5" title="Appointments" class="submenu-item" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem5&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                        <img src="assets/appt.svg" class="menu-icon">
+                        <span class="menu-text hidden">Appointments</span>
+                    </a>
+                    <a id="lbMenuItem7" title="Appointment Calendar" class="submenu-item" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem7&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                        <img src="assets/apptCal.svg" class="menu-icon">
+                        <span class="menu-text hidden">Appointment Calendar</span>
+                    </a>
                 </div>
             </div>
-            <div class="crm-nav">
-                <div class="crm-nav-con">
-                    <button class="scheduling-button">
-                        <img src="assets/crm.svg" alt="crmIcon">
-                        <span>CRM</span>
-                    </button>
-                </div>
+            <div class="menu-item">
+                <a id="lbMenuItem2" title="CRM" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem2&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                    <img src="assets/crm.svg" class="menu-icon">
+                    <span class="menu-text hidden">CRM</span>
+                </a>
             </div>
-            <div class="drive-tools-nav">
-                <div class="dirve-nav-con">
-                    <button class="scheduling-button">
-                        <img src="assets/drive.svg" alt="dirvetools">
-                        <span>Drive Tools</span>
-                    </button>
-                </div>
+            <div class="menu-item">
+                <a id="lbMenuItem3" title="Text Pro" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem3&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                    <img src="assets/marketing.svg" class="menu-icon">
+                    <span class="menu-text hidden">Text Pro</span>
+                </a>
             </div>
-            <div class="marketing-nav">
-                <div class="marketing-nav-con">
-                    <button class="scheduling-button">
-                        <img src="assets/marketing.svg" alt="dirvetools">
-                        <span>Marketing</span>
-                    </button>
-                </div>
+            <div class="menu-item">
+                <a id="lbMenuItem8" title="DNC" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem8&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                    <img src="assets/dnc.svg" class="menu-icon">
+                    <span class="menu-text hidden">DNC</span>
+                </a>
             </div>
-            <div class="dnc-nav">
-                <div class="dnc-nav-con">
-                    <button class="scheduling-button">
-                        <img src="assets/dnc.svg" alt="dirvetools">
-                        <span>DNC</span>
-                    </button>
-                </div>
-            </div>
-            <div class="settings-nav">
-                <div class="settings-nav-con">
-                    <button class="scheduling-button">
-                        <img src="assets/settings.svg" alt="dirvetools">
-                        <span>Settings</span>
-                    </button>
-                </div>
-            </div>
-            <div class="logout-nav">
-                <div class="logout-nav-con">
-                    <button class="scheduling-button">
-                        <img src="assets/logout.svg" alt="dirvetools">
-                        <span>Logout</span>
-                    </button>
-                </div>
+            <div class="menu-item">
+                <a id="lbMenuItem15" title="Logout" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem15&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                    <img src="assets/logout.svg" class="menu-icon">
+                    <span class="menu-text hidden">Logout</span>
+                </a>
             </div>
         </div>
-    </nav>
+    </div>
+    
     <!-- Side Navbar Ends-->
 
     <!-- Main Content Starts-->
