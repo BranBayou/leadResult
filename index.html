@@ -8,14 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Home</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="crmtasksstyle.css"> -->
 </head>
 <body>
     <!-- Side Navbar Starts-->
-    <div class="sidebar">
+    <div class="sidebar sidebar-only-icon">
         <div class="sidebar-logo">
             <a id="lbLogo" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbLogo&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
                 <img src="/assets/logoImage1.svg" alt="LeadResult-Logo" class="sidebar-logo-img">
-                <img class="sidebar-logo-img hidden" src="/assets/logoImage2.svg" alt="LeadResult-Logo">
+                <div class="logo-text-div">
+                    <h1 class="sidebar-logo-img sidebar-logo-img2 hidden">LeadResult</h1>
+                    <p class="sidebar-logo-img sidebar-logo-img2 hidden">DRIVING CUSTOMER RESPONSE</p>
+                </div>
+                <!-- <img class="sidebar-logo-img sidebar-logo-img2 hidden" src="/assets/logoImage2.svg" alt="LeadResult-Logo"> -->
             </a>
         </div>
         <div class="menu">
@@ -25,11 +30,11 @@
                     <span class="menu-text hidden">Scheduling</span>
                 </a>
                 <div class="submenu">
-                    <a id="lbMenuItem5" title="Appointments" class="submenu-item" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem5&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                    <a id="lbMenuItem5" title="Appointments" class="submenu-item icon-only-sub-menu" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem5&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
                         <img src="assets/appt.svg" class="menu-icon">
                         <span class="menu-text hidden">Appointments</span>
                     </a>
-                    <a id="lbMenuItem7" title="Appointment Calendar" class="submenu-item" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem7&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                    <a id="lbMenuItem7" title="Appointment Calendar" class="submenu-item icon-only-sub-menu" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem7&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
                         <img src="assets/apptCal.svg" class="menu-icon">
                         <span class="menu-text hidden">Appointment Calendar</span>
                     </a>
@@ -181,6 +186,214 @@
                 <button>Phillipsburg Easton Honda</button>
                 <button>Clinton Acura</button>
             </div>
+        </section>
+
+        <!-- Tabel section -->
+        <section class="total-tasks-show">
+            <p>477 
+                Customers
+            </p>
+        </section>
+
+        <section class="tasks-tabel-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="filter-container">
+                                <p class="th-name">First Name</p>  
+                            </div>
+                        </th>
+                        <th>
+                            <div class="filter-container">
+                                <p class="th-name">Last Name</p>
+                                
+                            </div>
+                        </th>
+                        <th>
+                            <div class="filter-container">
+                                <p class="th-name">Phone</p>
+                                
+                            </div>
+                        </th>
+                        <th>
+                            <div class="filter-container">
+                                <p class="th-name">Vehicle</p>
+                                
+                            </div>
+                        </th>
+                        <th>
+                            <div class="filter-container">
+                                <p class="th-name">Store</p>
+                                
+                            </div>
+                        </th>
+                        <th>
+                            <div class="filter-container">
+                                
+                                <p class="th-name">Email ID</p>
+                                
+                            </div>
+                        </th>
+                        <th>
+                            <div class="filter-container">
+                                <p class="th-name">Cell Phone</p>
+                                
+                            </div>
+                        </th>
+                        <th>
+                            <div class="filter-container">
+                                <p class="th-name">Last Visit</p>
+                                
+                            </div>
+                        </th>
+                        <th>
+                            <div class="filter-container">
+                                <p class="th-name">Action</p>
+                                
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Linda</td>
+                        <td>Walker</td>
+                        <td>9083032190</td>
+                        <td>Jacky Sarmiento</td>
+                        <td>2024-12-01</td>
+                        <td>2024 ACURA TSX</td>
+                        <td>9083032190</td>
+                        <td>2024-12-10</td>
+                        <td>
+                            <div class="small-icons-div">
+                                <button><img src="assets/eyeIcon.svg" alt="eyeIcon"></button>
+                                <button><img src="assets/calendarYellowIcon.svg" alt="calendarIcon"></button>
+                                <button><img src="assets/deleteIcon.svg" alt="deleteIcon"></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Linda</td>
+                        <td>Walker</td>
+                        <td>9083032190</td>
+                        <td>Jacky Sarmiento</td>
+                        <td>2024-12-01</td>
+                        <td>2024 ACURA TSX</td>
+                        <td>9083032190</td>
+                        <td>2024-12-10</td>
+                        <td>
+                            <div class="small-icons-div">
+                                <button><img src="assets/eyeIcon.svg" alt="eyeIcon"></button>
+                                <button><img src="assets/calendarYellowIcon.svg" alt="calendarIcon"></button>
+                                <button><img src="assets/deleteIcon.svg" alt="deleteIcon"></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Linda</td>
+                        <td>Walker</td>
+                        <td>9083032190</td>
+                        <td>Jacky Sarmiento</td>
+                        <td>2024-12-01</td>
+                        <td>2024 ACURA TSX</td>
+                        <td>9083032190</td>
+                        <td>2024-12-10</td>
+                        <td>
+                            <div class="small-icons-div">
+                                <button><img src="assets/eyeIcon.svg" alt="eyeIcon"></button>
+                                <button><img src="assets/calendarYellowIcon.svg" alt="calendarIcon"></button>
+                                <button><img src="assets/deleteIcon.svg" alt="deleteIcon"></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Linda</td>
+                        <td>Walker</td>
+                        <td>9083032190</td>
+                        <td>Jacky Sarmiento</td>
+                        <td>2024-12-01</td>
+                        <td>2024 ACURA TSX</td>
+                        <td>9083032190</td>
+                        <td>2024-12-10</td>
+                        <td>
+                            <div class="small-icons-div">
+                                <button><img src="assets/eyeIcon.svg" alt="eyeIcon"></button>
+                                <button><img src="assets/calendarYellowIcon.svg" alt="calendarIcon"></button>
+                                <button><img src="assets/deleteIcon.svg" alt="deleteIcon"></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Linda</td>
+                        <td>Walker</td>
+                        <td>9083032190</td>
+                        <td>Jacky Sarmiento</td>
+                        <td>2024-12-01</td>
+                        <td>2024 ACURA TSX</td>
+                        <td>9083032190</td>
+                        <td>2024-12-10</td>
+                        <td>
+                            <div class="small-icons-div">
+                                <button><img src="assets/eyeIcon.svg" alt="eyeIcon"></button>
+                                <button><img src="assets/calendarYellowIcon.svg" alt="calendarIcon"></button>
+                                <button><img src="assets/deleteIcon.svg" alt="deleteIcon"></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Linda</td>
+                        <td>Walker</td>
+                        <td>9083032190</td>
+                        <td>Jacky Sarmiento</td>
+                        <td>2024-12-01</td>
+                        <td>2024 ACURA TSX</td>
+                        <td>9083032190</td>
+                        <td>2024-12-10</td>
+                        <td>
+                            <div class="small-icons-div">
+                                <button><img src="assets/eyeIcon.svg" alt="eyeIcon"></button>
+                                <button><img src="assets/calendarYellowIcon.svg" alt="calendarIcon"></button>
+                                <button><img src="assets/deleteIcon.svg" alt="deleteIcon"></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Linda</td>
+                        <td>Walker</td>
+                        <td>9083032190</td>
+                        <td>Jacky Sarmiento</td>
+                        <td>2024-12-01</td>
+                        <td>2024 ACURA TSX</td>
+                        <td>9083032190</td>
+                        <td>2024-12-10</td>
+                        <td>
+                            <div class="small-icons-div">
+                                <button><img src="assets/eyeIcon.svg" alt="eyeIcon"></button>
+                                <button><img src="assets/calendarYellowIcon.svg" alt="calendarIcon"></button>
+                                <button><img src="assets/deleteIcon.svg" alt="deleteIcon"></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Linda</td>
+                        <td>Walker</td>
+                        <td>9083032190</td>
+                        <td>Jacky Sarmiento</td>
+                        <td>2024-12-01</td>
+                        <td>2024 ACURA TSX</td>
+                        <td>9083032190</td>
+                        <td>2024-12-10</td>
+                        <td>
+                            <div class="small-icons-div">
+                                <button><img src="assets/eyeIcon.svg" alt="eyeIcon"></button>
+                                <button><img src="assets/calendarYellowIcon.svg" alt="calendarIcon"></button>
+                                <button><img src="assets/deleteIcon.svg" alt="deleteIcon"></button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
     <!-- Main Content Ends-->
