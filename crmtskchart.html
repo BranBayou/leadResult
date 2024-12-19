@@ -13,104 +13,60 @@
 </head>
 <body>
     <!-- Side Navbar Starts-->
-    <nav>
-        <!-- Logo Div Starts-->
-        <div class="logo-div">
-            <img src="assets/logoImage1.svg" alt="LeadResult-Logo">
-            <img class="hidden" src="assets/logoImage2.svg" alt="LeadResult-Logo">
+    <div class="sidebar sidebar-only-icon">
+        <div class="sidebar-logo">
+            <a id="lbLogo" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbLogo&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                <img src="/assets/logoImage1.svg" alt="LeadResult-Logo" class="sidebar-logo-img">
+                <div class="logo-text-div">
+                    <h1 class="sidebar-logo-img sidebar-logo-img2 hidden">LeadResult</h1>
+                    <p class="sidebar-logo-img sidebar-logo-img2 hidden">DRIVING CUSTOMER RESPONSE</p>
+                </div>
+                <!-- <img class="sidebar-logo-img sidebar-logo-img2 hidden" src="/assets/logoImage2.svg" alt="LeadResult-Logo"> -->
+            </a>
         </div>
-        <!-- Logo Div Ends-->
-        <!-- <div class="separator-div">
-            <img src="assets/separator.svg" alt="separatorImg">
-        </div> -->
-        <!-- Nav Div Starts-->
-        <div class="nav-div">
-            <div class="scheduling-nav">
-                <div class="scheduling-nav-con">
-                    <button class="scheduling-button">
-                        <img src="assets/schedulingIcon.svg" alt="schedulingIcon">
-                        <span class="hidden">Scheduling</span>
-                    </button>
-                    <!-- <div class="scheduling-nav-inner-div">
-                        <button class="has-bottom">
-                            <img src="assets/appt.svg" alt="">
-                            <span class="hidden">Appointments </span>
-                        </button>
-                        <button class="has-bottom">
-                            <img src="assets/apptCal.svg" alt="">
-                            <span class="hidden">Appt. Calander</span>
-                        </button>
-                        <button class="">
-                            <img src="assets/admin.svg" alt="">
-                            <span class="hidden">Admin</span>
-                        </button>
-                    </div> -->
+        <div class="menu">
+            <div class="selected-menu-item">
+                <a id="lbMenuItem1" title="Scheduling" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem1&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                    <img src="/assets/schedulingIcon.svg" class="menu-icon">
+                    <span class="menu-text hidden">Scheduling</span>
+                </a>
+                <div class="submenu">
+                    <a id="lbMenuItem5" title="Appointments" class="submenu-item icon-only-sub-menu" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem5&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                        <img src="assets/appt.svg" class="menu-icon">
+                        <span class="menu-text hidden">Appointments</span>
+                    </a>
+                    <a id="lbMenuItem7" title="Appointment Calendar" class="submenu-item icon-only-sub-menu" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem7&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                        <img src="assets/apptCal.svg" class="menu-icon">
+                        <span class="menu-text hidden">Appointment Calendar</span>
+                    </a>
                 </div>
             </div>
-            <div class="crm-nav">
-                <div class="crm-nav-con">
-                    <button class="scheduling-button">
-                        <img src="assets/crmWhitIcon.svg" alt="crmIcon">
-                        <span class="hidden">CRM</span>
-                    </button>
-                    <div class="scheduling-nav-inner-div">
-                        <button class="has-bottom">
-                            <img src="assets/taskSubIcon1.svg" alt="">
-                            <span class="hidden">Appointments </span>
-                        </button>
-                        <button class="has-bottom">
-                            <img src="assets/taskSubIcon2.svg" alt="">
-                            <span class="hidden">Appt. Calander</span>
-                        </button>
-                        <button class="">
-                            <img src="assets/taskSubIcon3.svg" alt="">
-                            <span class="hidden">Admin</span>
-                        </button>
-                    </div>
-                </div>
+            <div class="menu-item">
+                <a id="lbMenuItem2" title="CRM" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem2&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                    <img src="assets/crm.svg" class="menu-icon">
+                    <span class="menu-text hidden">CRM</span>
+                </a>
             </div>
-            <div class="drive-tools-nav">
-                <div class="dirve-nav-con">
-                    <button class="scheduling-button">
-                        <img src="assets/drive.svg" alt="dirvetools">
-                        <span class="hidden">Drive Tools</span>
-                    </button>
-                </div>
+            <div class="menu-item">
+                <a id="lbMenuItem3" title="Text Pro" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem3&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                    <img src="assets/marketing.svg" class="menu-icon">
+                    <span class="menu-text hidden">Text Pro</span>
+                </a>
             </div>
-            <div class="marketing-nav">
-                <div class="marketing-nav-con">
-                    <button class="scheduling-button">
-                        <img src="assets/marketing.svg" alt="dirvetools">
-                        <span class="hidden">Marketing</span>
-                    </button>
-                </div>
+            <div class="menu-item">
+                <a id="lbMenuItem8" title="DNC" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem8&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                    <img src="assets/dnc.svg" class="menu-icon">
+                    <span class="menu-text hidden">DNC</span>
+                </a>
             </div>
-            <div class="dnc-nav">
-                <div class="dnc-nav-con">
-                    <button class="scheduling-button">
-                        <img src="assets/dnc.svg" alt="dirvetools">
-                        <span class="hidden">DNC</span>
-                    </button>
-                </div>
-            </div>
-            <div class="settings-nav">
-                <div class="settings-nav-con">
-                    <button class="scheduling-button">
-                        <img src="assets/settings.svg" alt="dirvetools">
-                        <span class="hidden">Settings</span>
-                    </button>
-                </div>
-            </div>
-            <div class="logout-nav">
-                <div class="logout-nav-con">
-                    <button class="scheduling-button">
-                        <img src="assets/logout.svg" alt="dirvetools">
-                        <span class="hidden">Logout</span>
-                    </button>
-                </div>
+            <div class="menu-item">
+                <a id="lbMenuItem15" title="Logout" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem15&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                    <img src="assets/logout.svg" class="menu-icon">
+                    <span class="menu-text hidden">Logout</span>
+                </a>
             </div>
         </div>
-    </nav>
+    </div>
     <!-- Side Navbar Ends-->
 
     <!-- Main Content Starts-->
@@ -161,7 +117,7 @@
             <div class="charts-div">
                 <div class="chart-main-con">
                     <div class="chart-container">
-                        <div class="donut-chart" onmousemove="showTooltip(event, 'Segment Info')" onmouseleave="hideTooltip()"></div>
+                        <div class="donut-chart"></div>
                         <div class="segment-tooltip"></div>
                     </div>
                     <div class="chart-name">
@@ -170,7 +126,7 @@
                 </div>
                 <div class="chart-main-con">
                     <div class="chart-container">
-                        <div class="donut-chart" onmousemove="showTooltip(event, 'Segment Info')" onmouseleave="hideTooltip()"></div>
+                        <div class="donut-chart"></div>
                         <div class="segment-tooltip"></div>
                     </div>
                     <div class="chart-name">
@@ -179,7 +135,7 @@
                 </div>
                 <div class="chart-main-con">
                     <div class="chart-container">
-                        <div class="donut-chart" onmousemove="showTooltip(event, 'Segment Info')" onmouseleave="hideTooltip()"></div>
+                        <div class="donut-chart"></div>
                         <div class="segment-tooltip"></div>
                     </div>
                     <div class="chart-name">
@@ -188,7 +144,7 @@
                 </div>
                 <div class="chart-main-con">
                     <div class="chart-container">
-                        <div class="donut-chart" onmousemove="showTooltip(event, 'Segment Info')" onmouseleave="hideTooltip()"></div>
+                        <div class="donut-chart"></div>
                         <div class="segment-tooltip"></div>
                     </div>
                     <div class="chart-name">
@@ -289,6 +245,101 @@
 
     </main>
     <!-- Main Content Ends-->
-    <script src="main.js"></script>
+
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript">
+        const donutCharts = document.querySelectorAll('.donut-chart');
+const globalTooltip = document.getElementById('tooltip');
+const piChartSection = document.querySelector('.pichart-section');
+const navButtons = document.querySelectorAll('.nav-buttons');
+
+// Segment data
+const segmentsData = [
+  { start: 0, end: 10, label: "Green (10%)" },
+  { start: 11, end: 25, label: "Orange (14%)" },
+  { start: 26, end: 70, label: "Yellow (44%)" },
+  { start: 71, end: 95, label: "Blue (24%)" },
+  { start: 96, end: 100, label: "Green (4%)" }
+];
+
+donutCharts.forEach((chart) => {
+  chart.addEventListener('mousemove', (event) => {
+    const rect = chart.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    // Calculate the angle
+    const x = event.clientX - centerX;
+    const y = event.clientY - centerY;
+    let angle = Math.atan2(y, x) * (180 / Math.PI); // Convert radians to degrees
+    angle = (angle + 360 + 90) % 360; // Normalize angle and offset for rotation
+
+    // Find the segment
+    const percentage = (angle / 360) * 100;
+    const segment = segmentsData.find(seg => percentage >= seg.start && percentage <= seg.end);
+
+    if (segment) {
+      // Show the tooltip
+      globalTooltip.style.display = 'block';
+      globalTooltip.textContent = segment.label;
+
+      // Position tooltip near mouse
+      globalTooltip.style.left = `${event.pageX + 10}px`;
+      globalTooltip.style.top = `${event.pageY + 10}px`;
+
+      // Remove position: relative from piChartSection on hover
+      piChartSection.style.position = 'static'; // Removes relative positioning
+
+      // Hide navigation buttons by looping through them
+      navButtons.forEach(button => {
+        button.style.display = 'none';
+      });
+    }
+  });
+
+  chart.addEventListener('mouseleave', () => {
+    // Hide tooltip when leaving the chart
+    globalTooltip.style.display = 'none';
+
+    // Restore position: relative on piChartSection when mouse leaves
+    piChartSection.style.position = 'relative'; // Restore relative positioning
+
+    // Show navigation buttons again by looping through them
+    navButtons.forEach(button => {
+      button.style.display = 'flex'; // Or use 'inline-block', depending on your layout
+    });
+  });
+});
+        // Event listeneer for dount charts scroll //
+const chartsDiv = document.querySelector('.charts-div');
+const nextButton = document.querySelector('.next-button');
+const prevButton = document.querySelector('.prev-button');
+
+const scrollAmount = 300;
+
+// Scroll to the right
+nextButton.addEventListener('click', () => {
+  chartsDiv.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});
+
+// Scroll to the left
+prevButton.addEventListener('click', () => {
+  chartsDiv.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
+
+const dateInput = document.getElementById('date-picker');
+
+    dateInput.addEventListener('focus', () => {
+        // Change input type to date on focus
+        dateInput.type = 'date';
+    });
+
+    dateInput.addEventListener('blur', () => {
+        // Reset type back to text if the value is empty
+        if (!dateInput.value) {
+            dateInput.type = 'text';
+        }
+    })
+    </script>
 </body>
 </html>
