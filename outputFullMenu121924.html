@@ -1,30 +1,70 @@
 <div class="sidebar sidebar-only-icon">
 	<div class="sidebar-logo">
 		<div id="lbLogo">
-			<img src="./images/oper2024/logoImage1.svg" alt="LeadResult-Logo" class="sidebar-logo-img">
+			<img src="./images/oper2024/logoImage1.svg" alt="LeadResult-Logo" class="sidebar-logo-img" />
 			<div class="logo-text-div">
-				<h1 class="sidebar-logo-img sidebar-logo-img2 hidden" style="opacity: 0; transition: opacity 0.3s;">LeadResult</h1>
-				<p class="sidebar-logo-img sidebar-logo-img2 hidden" style="opacity: 0; transition: opacity 0.3s;">DRIVING CUSTOMER RESPONSE</p>
+				<h1 class="sidebar-logo-img sidebar-logo-img2 hidden" style="opacity: 0; transition: opacity 0.3s">
+					LeadResult
+				</h1>
+				<p class="sidebar-logo-img sidebar-logo-img2 hidden" style="opacity: 0; transition: opacity 0.3s">
+					DRIVING CUSTOMER RESPONSE
+				</p>
 			</div>
 		</div>
 	</div>
 	<div class="menu">
 		<div class="menu-item">
-			<a onclick="CollapseMenu();" id="nScheduler" title="Scheduling" class="menu-link icon-only-menu" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;nScheduler&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-			<img class="menu-icon" src="images\Oper2024\dashboardGrey.svg" style="border-width:0px;">
-			<span class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s;">Scheduling</span></a>
+			<a onclick="CollapseMenu();" id="nScheduler" title="Scheduling" class="menu-link icon-only-menu"
+				href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("nScheduler", "", true, "", "", false, true))'>
+				<img class="menu-icon" src="images\Oper2024\dashboardGrey.svg" style="border-width: 0px" />
+				<span class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Scheduling</span></a>
 			<div id="smScheduler" class="submenu hidden2">
-				<a onclick="CollapseMenu();" id="nSchedulerSchedulerUnifiedSearch" title="Appointments" class="submenu-item icon-only-sub-menu" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;nSchedulerSchedulerUnifiedSearch&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"><img class="menu-icon" src="images\Oper2024\appointmntGrey.svg" style="border-width:0px;"><span class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s;">Appointments</span></a>
-				<a onclick="CollapseMenu();" id="nSchedulerSchedulerAppointmentCalendar" title="Appointment Calendar" class="submenu-item icon-only-sub-menu" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;nSchedulerSchedulerAppointmentCalendar&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"><img class="menu-icon" src="images\Oper2024\apptstatusGrey.svg" style="border-width:0px;"><span class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s;">Appointment Calendar</span></a>
+				<a onclick="CollapseMenu();" id="nSchedulerSchedulerUnifiedSearch" title="Appointments"
+					class="submenu-item icon-only-sub-menu"
+					href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("nSchedulerSchedulerUnifiedSearch", "", true, "", "", false, true))'><img
+						class="menu-icon" src="images\Oper2024\appointmntGrey.svg" style="border-width: 0px" /><span
+						class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Appointments</span></a>
+				<a onclick="CollapseMenu();" id="nSchedulerSchedulerAppointmentCalendar" title="Appointment Calendar"
+					class="submenu-item icon-only-sub-menu"
+					href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("nSchedulerSchedulerAppointmentCalendar", "", true, "", "", false, true))'><img
+						class="menu-icon" src="images\Oper2024\apptstatusGrey.svg" style="border-width: 0px" /><span
+						class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Appointment
+						Calendar</span></a>
 			</div>
 		</div>
 		<div class="menu-item">
-			<a onclick="CollapseMenu();" id="nCRM" title="CRM" class="menu-link icon-only-menu" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;nCRM&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"><img class="menu-icon" src="images\Oper2024\CRMGrey.svg" style="border-width:0px;"><span class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s;">CRM</span></a>
+			<a onclick="CollapseMenu();" id="nCRM" title="CRM" class="menu-link icon-only-menu"
+				href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("nCRM", "", true, "", "", false, true))'><img
+					class="menu-icon" src="images\Oper2024\CRMGrey.svg" style="border-width: 0px" /><span
+					class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">CRM</span></a>
 			<div id="smCRM" class="submenu hidden2">
-				<a onclick="CollapseMenu();" id="nCRMCRMTasks" title="Tasks" class="submenu-item icon-only-sub-menu" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;nCRMCRMTasks&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"><img class="menu-icon" src="images\Oper2024\TasksGrey.svg" style="border-width:0px;"><span class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s;">Tasks</span></a>
-				<a onclick="CollapseMenu();" id="nCRMCRMReports" title="Reports" class="submenu-item icon-only-sub-menu" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;nCRMCRMReports&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"><img class="menu-icon" src="images\Oper2024\TaskReportsGrey.svg" style="border-width:0px;"><span class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s;">Reports</span></a>
+				<a onclick="CollapseMenu();" id="nCRMCRMTasks" title="Tasks" class="submenu-item icon-only-sub-menu"
+					href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("nCRMCRMTasks", "", true, "", "", false, true))'><img
+						class="menu-icon" src="images\Oper2024\TasksGrey.svg" style="border-width: 0px" /><span
+						class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Tasks</span></a>
+				<a onclick="CollapseMenu();" id="nCRMCRMReports" title="Reports" class="submenu-item icon-only-sub-menu"
+					href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("nCRMCRMReports", "", true, "", "", false, true))'><img
+						class="menu-icon" src="images\Oper2024\TaskReportsGrey.svg" style="border-width: 0px" /><span
+						class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Reports</span></a>
 			</div>
 		</div>
-		<div class="menu-item"><a onclick="CollapseMenu();" id="nTextPro" title="Text Pro" class="menu-link icon-only-menu" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;nTextPro&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"><img class="menu-icon" src="images\Oper2024\text_proGrey.svg" style="border-width:0px;"><span class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s;">Text Pro</span></a></div><div class="menu-item"><a onclick="CollapseMenu();" id="nSchedulerDNC" title="DNC" class="menu-link icon-only-menu" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;nSchedulerDNC&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"><img class="menu-icon" src="images\Oper2024\dncGrey.svg" style="border-width:0px;"><span class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s;">DNC</span></a></div><div class="menu-item"><a onclick="CollapseMenu();" id="nLogout" title="Logout" class="menu-link icon-only-menu" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;nLogout&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))"><img class="menu-icon" src="images\Oper2024\LogoutGrey.svg" style="border-width:0px;"><span class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s;">Logout</span></a></div>
-        </div>
-        </div>
+		<div class="menu-item">
+			<a onclick="CollapseMenu();" id="nTextPro" title="Text Pro" class="menu-link icon-only-menu"
+				href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("nTextPro", "", true, "", "", false, true))'><img
+					class="menu-icon" src="images\Oper2024\text_proGrey.svg" style="border-width: 0px" /><span
+					class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Text Pro</span></a>
+		</div>
+		<div class="menu-item">
+			<a onclick="CollapseMenu();" id="nSchedulerDNC" title="DNC" class="menu-link icon-only-menu"
+				href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("nSchedulerDNC", "", true, "", "", false, true))'><img
+					class="menu-icon" src="images\Oper2024\dncGrey.svg" style="border-width: 0px" /><span
+					class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">DNC</span></a>
+		</div>
+		<div class="menu-item">
+			<a onclick="CollapseMenu();" id="nLogout" title="Logout" class="menu-link icon-only-menu"
+				href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("nLogout", "", true, "", "", false, true))'><img
+					class="menu-icon" src="images\Oper2024\LogoutGrey.svg" style="border-width: 0px" /><span
+					class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Logout</span></a>
+		</div>
+	</div>
+</div>

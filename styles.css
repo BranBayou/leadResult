@@ -83,8 +83,30 @@ body span {
   transition: width 0.3s ease;
 }
 
-.menu .menu-item {
-  padding: 0 1rem 0 .8rem;
+
+
+.menu .selected-menu-item .menu-link {
+  transition: background-color 0.3s ease;
+  padding: 0 1rem;
+  border-radius: .75rem;
+}
+
+.menu .menu-item > * {
+  padding: 0 1rem;
+  border-radius: .75rem;
+}
+
+.menu-item {
+  margin: .15rem 0;
+}
+
+.blue-bg {
+  background-color: var(--blue-color);
+}
+
+.gray-bg {
+  background-color: var(--nav-bg-color);
+  border-radius: .75rem;
 }
 
 .menu .menu-item:hover {
@@ -118,12 +140,6 @@ body span {
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-
-.menu .selected-menu-item .menu-link {
-  background-color: var(--blue-color);
-  padding: 0 1rem;
-  border-radius: .75rem;
 }
 
 .menu .selected-menu-item .submenu-item {
@@ -631,15 +647,38 @@ tbody tr td {
 
 /* Icon only */
 
-/* .icon-only-menu {
-justify-content: center;
-} */
-
 .icon-only-sub-menu {
-padding: 1rem !important;
+  padding: 1rem 0 1rem 2rem !important;
+  transition: padding 0.3s ease;
 }
 
 .hidden {
   opacity: 0;
   transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.menu .selected-menu-item .submenu-item {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.hidden2 {
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+  transition: max-height 0.3s ease-out;
+}
+
+.submenu.active {
+  max-height: 200px; 
+}
+
+.main-menu-icon {
+  width: 22px;
+}
+
+.sub-menu-icon {
+  width: 14px;
+  margin-left: 3px;
 }
