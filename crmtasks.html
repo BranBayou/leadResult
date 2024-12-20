@@ -12,68 +12,60 @@
 </head>
 <body>
     <!-- Side Navbar Starts-->
-    <nav>
-        <div class="logo-div">
+    <div class="sidebar sidebar-only-icon">
+        <div class="sidebar-logo">
             <a id="lbLogo" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbLogo&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                <img src="/assets/logoImage1.svg" alt="LeadResult-Logo">
-                <img class="hidden" src="/assets/logoImage2.svg" alt="LeadResult-Logo">
+                <img src="/assets/logoImage1.svg" alt="LeadResult-Logo" class="sidebar-logo-img">
+                <div class="logo-text-div">
+                    <h1 class="sidebar-logo-img sidebar-logo-img2 hidden">LeadResult</h1>
+                    <p class="sidebar-logo-img sidebar-logo-img2 hidden">DRIVING CUSTOMER RESPONSE</p>
+                </div>
+                <!-- <img class="sidebar-logo-img sidebar-logo-img2 hidden" src="/assets/logoImage2.svg" alt="LeadResult-Logo"> -->
             </a>
         </div>
-        <div class="nav-div">
-            <div class="crm-nav">
-                <div class="crm-nav-con">
-                    <a id="lbMenuItem1" title="Scheduling" class="scheduling-button" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem1&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                        <img src="/assets/schedulingIcon.svg" style="border-width:0px;">
-                        <span class="hidden">Scheduling</span>
+        <div class="menu">
+            <div class="selected-menu-item">
+                <a id="lbMenuItem1" title="Scheduling" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem1&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                    <img src="/assets/schedulingIcon.svg" class="menu-icon">
+                    <span class="menu-text hidden">Scheduling</span>
+                </a>
+                <div class="submenu">
+                    <a id="lbMenuItem5" title="Appointments" class="submenu-item icon-only-sub-menu" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem5&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                        <img src="assets/appt.svg" class="menu-icon">
+                        <span class="menu-text hidden">Appointments</span>
                     </a>
-                    <div class="scheduling-nav-inner-div">
-                        
-                        <a id="lbMenuItem5" title="Appointments" class="scheduling-button has-bottom" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem5&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                            <img src="assets/appt.svg" style="border-width:0px;">
-                            <span class="hidden">Appointments</span>
-                        </a>
-                        
-                        <a id="lbMenuItem7" title="Appointment Calendar" class="scheduling-button has-bottom" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem7&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                            <img src="assets/apptCal.svg" style="border-width:0px;">
-                            <span class="hidden">Appointment Calendar</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="scheduling-nav">
-                <div class="scheduling-nav-con">
-                    <a id="lbMenuItem2" title="CRM" class="scheduling-button" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem2&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                        <img src="assets/crm.svg" style="border-width:0px;">
-                        <span class="hidden">CRM</span>
+                    <a id="lbMenuItem7" title="Appointment Calendar" class="submenu-item icon-only-sub-menu" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem7&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                        <img src="assets/apptCal.svg" class="menu-icon">
+                        <span class="menu-text hidden">Appointment Calendar</span>
                     </a>
                 </div>
             </div>
-            <div class="scheduling-nav">
-                <div class="scheduling-nav-con">
-                    <a id="lbMenuItem3" title="Text Pro" class="scheduling-button" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem3&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                        <img src="assets/marketing.svg" style="border-width:0px;">
-                        <span class="hidden">Text Pro</span>
-                    </a>
-                </div>
+            <div class="menu-item">
+                <a id="lbMenuItem2" title="CRM" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem2&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                    <img src="assets/crm.svg" class="menu-icon">
+                    <span class="menu-text hidden">CRM</span>
+                </a>
             </div>
-            <div class="scheduling-nav">
-                <div class="scheduling-nav-con">
-                    <a id="lbMenuItem8" title="DNC" class="scheduling-button" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem8&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                        <img src="assets/dnc.svg" style="border-width:0px;">
-                        <span class="hidden">DNC</span>
-                    </a>
-                </div>
+            <div class="menu-item">
+                <a id="lbMenuItem3" title="Text Pro" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem3&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                    <img src="assets/marketing.svg" class="menu-icon">
+                    <span class="menu-text hidden">Text Pro</span>
+                </a>
             </div>
-            <div class="scheduling-nav">
-                <div class="scheduling-nav-con">
-                    <a id="lbMenuItem15" title="Logout" class="scheduling-button" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem15&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
-                        <img src="assets/logout.svg" style="border-width:0px;">
-                        <span class="hidden">Logout</span>
-                    </a>
-                </div>
+            <div class="menu-item">
+                <a id="lbMenuItem8" title="DNC" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem8&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                    <img src="assets/dnc.svg" class="menu-icon">
+                    <span class="menu-text hidden">DNC</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a id="lbMenuItem15" title="Logout" class="menu-link" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lbMenuItem15&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">
+                    <img src="assets/logout.svg" class="menu-icon">
+                    <span class="menu-text hidden">Logout</span>
+                </a>
             </div>
         </div>
-    </nav>
+    </div>
     <!-- Side Navbar Ends-->
 
     <!-- Main Content Starts-->
