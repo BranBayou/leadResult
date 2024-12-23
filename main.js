@@ -2,6 +2,7 @@
 
 const sidebar = document.querySelector('.sidebar');
 const hiddenTexts = document.querySelectorAll('.hidden');
+const submenus = document.querySelectorAll('.submenu');
 const submenuItems = document.querySelectorAll('.submenu-item');
 const sidebarLogo = document.querySelector('.sidebar-logo');
 const lbLogo = document.querySelector('#lbLogo');
@@ -13,6 +14,7 @@ const menuLinks = document.querySelectorAll('.menu-link');
 sidebar.addEventListener('mouseenter', () => {
   sidebar.classList.add('nav-expanded-width');
   mainMenu.style.margin = '0';
+  submenus.forEach((submenu) => { submenu.style.width = '100%'; });
   menuItems.forEach((menuItem) => {
     menuItem.style.alignItems = 'start';
     // menuItem.style.padding = '0 1rem';
@@ -25,6 +27,7 @@ sidebar.addEventListener('mouseenter', () => {
   });
   submenuItems.forEach((item) => {
     item.classList.add('icon-only-sub-menu');
+    item.style.width = '100%';
   });
   menuLinks.forEach((link) => {
     link.style.width = '100%';
@@ -40,6 +43,7 @@ sidebar.addEventListener('mouseleave', () => {
   menuItems.forEach((menuItem) => {
     menuItem.style.alignItems = 'center';
   });
+  submenus.forEach((submenu) => { submenu.style.width = ''; });
   hiddenTexts.forEach((hiddenText) => {
     hiddenText.style.opacity = '0';
     hiddenText.style.transition = 'opacity 0.3s ease';
@@ -60,81 +64,114 @@ sidebar.addEventListener('mouseleave', () => {
 });
 
 
-menuLinks.forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
+document.addEventListener('DOMContentLoaded', function () {
+  const menuLinks = document.querySelectorAll('.menu-link');
+  
+  menuLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
 
-    // Remove the blue-bg class and reset icons for all links
-    menuLinks.forEach(item => {
-      item.classList.remove('blue-bg');
-      
-      // Reset the icon to its default state (add `-1` only if not already present)
-      const icon = item.querySelector('.menu-icon');
-      if (icon) {
-        icon.src = icon.src.replace(/-1\.svg$/, '.svg').replace(/\.svg$/, '-1.svg');
+      const targetId = this.getAttribute('data-target');
+      const targetMenu = document.getElementById(targetId);
+      const isSubmenu = targetMenu && targetMenu.classList.contains('submenu');
+
+      // Handle submenus
+      if (isSubmenu) {
+        // Close all other submenus slowly before opening the clicked submenu
+        document.querySelectorAll('.submenu.active').forEach(menu => {
+          menu.classList.remove('active');
+          menu.style.transition = "all 0.3s ease-out";
+        });
+
+        // Open the clicked submenu
+        if (targetMenu) {
+          targetMenu.classList.toggle('active');
+          targetMenu.style.transition = "all 0.3s ease-in";
+        }
       }
 
-      // Change the font color for inactive menu-text
-      const menuText = item.querySelector('.menu-text');
-      if (menuText) {
-        // Default color for all inactive links
-        menuText.style.color = '#B0B2B9';
-        menuText.style.fontWeight = '500';
+      // Allow postback for top-level menu items without submenus
+      if (!isSubmenu) {
+        window.location.href = this.href;  // Allow page navigation for top-level menu items
       }
-    });
 
-    // Add the blue-bg class for the clicked link
-    this.classList.add('blue-bg');
+      // Reset the menu links to default state
+      menuLinks.forEach(item => {
+        item.classList.remove('blue-bg');
+        const icon = item.querySelector('.menu-icon');
+        if (icon) {
+          icon.src = icon.src.replace(/-1\.svg$/, '.svg').replace(/\.svg$/, '-1.svg');
+        }
 
-    // Remove gray-bg class from all parent elements
-    menuLinks.forEach(item => {
-      const parent = item.parentElement;
-      if (parent) {
-        parent.classList.remove('gray-bg');
-      }
-    });
-
-    // Add gray-bg class to the parent of the clicked link
-    const parentElement = this.parentElement;
-    if (parentElement) {
-      parentElement.classList.add('gray-bg');
-    }
-
-    // Get the target submenu id
-    const targetId = this.getAttribute('data-target');
-    const targetMenu = document.getElementById(targetId);
-
-    // Close all other submenus first
-    document.querySelectorAll('.submenu').forEach(menu => {
-      if (menu !== targetMenu) {
-        menu.classList.remove('active');
-      }
-    });
-
-    // Toggle the active class for the target submenu
-    if (targetMenu) {
-      targetMenu.classList.toggle('active');
-    }
-
-    // Update the icon for the active link
-    const activeIcon = this.querySelector('.menu-icon');
-    if (activeIcon) {
-      activeIcon.src = activeIcon.src.replace(/-1\.svg$/, '.svg');
-    }
-
-    // Change the font color for the active menu-text
-    const activeMenuText = this.querySelector('.menu-text');
-    if (activeMenuText) {
-      activeMenuText.style.color = '#FFFFFF'; // Active color
-      activeMenuText.style.fontWeight = '600'; // Bold for active
-    }
-
-    // Ensure submenu text remains inactive unless clicked
-    if (!this.classList.contains('submenu-item')) {
-      document.querySelectorAll('.submenu-item .menu-text').forEach(submenuText => {
-        submenuText.style.color = '#B0B2B9'; // Inactive color for submenu items
-        submenuText.style.fontWeight = '500';
+        const menuText = item.querySelector('.menu-text');
+        if (menuText) {
+          menuText.style.color = '#B0B2B9';
+          menuText.style.fontWeight = '500';
+        }
       });
+
+      // Reset all menu items to remove gray-bg class
+      document.querySelectorAll('.menu-item').forEach(item => {
+        item.classList.remove('gray-bg');
+      });
+
+      // Mark the clicked item as active
+      this.classList.add('blue-bg');
+      const activeIcon = this.querySelector('.menu-icon');
+      if (activeIcon) {
+        activeIcon.src = activeIcon.src.replace(/-1\.svg$/, '.svg');
+      }
+
+      const activeMenuText = this.querySelector('.menu-text');
+      if (activeMenuText) {
+        activeMenuText.style.color = '#FFFFFF';
+        activeMenuText.style.fontWeight = '600';
+      }
+
+      // Handle submenu items
+      if (this.classList.contains('submenu-item')) {
+        const submenuIcon = this.querySelector('.menu-icon');
+        if (submenuIcon) {
+          submenuIcon.src = submenuIcon.src.replace(/-1\.svg$/, '.svg');
+        }
+
+        const submenuText = this.querySelector('.menu-text');
+        if (submenuText) {
+          submenuText.style.color = '#FFFFFF';
+          submenuText.style.fontWeight = '600';
+        }
+      }
+
+      // Add the gray-bg class to the parent menu item of the clicked link
+      const parentElement = this.closest('.menu-item');
+      if (parentElement) {
+        parentElement.classList.add('gray-bg');
+      }
+    });
+  });
+});
+
+
+// Function to set the active tab on page load
+document.addEventListener('DOMContentLoaded', function () {
+  const savedTab = document.getElementById('hfSelectedTab').value;
+
+  if (savedTab) {
+    // Find the menu link with the corresponding ID or data-target
+    const activeLink = document.querySelector(`[data-target="${savedTab}"], #${savedTab}`);
+
+    if (activeLink) {
+      activeLink.click();
+    }
+  }
+});
+
+// Save the active tab when a menu item is clicked
+menuLinks.forEach(link => {
+  link.addEventListener('click', function () {
+    const selectedTab = this.getAttribute('data-target') || this.id;
+    if (selectedTab) {
+      document.getElementById('hfSelectedTab').value = selectedTab;
     }
   });
 });
