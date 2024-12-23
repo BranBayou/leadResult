@@ -60,30 +60,34 @@ sidebar.addEventListener('mouseleave', () => {
 });
 
 
-document.querySelectorAll('.menu-link').forEach(link => {
+menuLinks.forEach(link => {
   link.addEventListener('click', function (e) {
     e.preventDefault();
 
-    // Remove the blue-bg class and inline width style from all links
-    document.querySelectorAll('.menu-link').forEach(item => {
+    // Remove the blue-bg class and reset icons for all links
+    menuLinks.forEach(item => {
       item.classList.remove('blue-bg');
+      
+      // Reset the icon to its default state (add `-1` only if not already present)
+      const icon = item.querySelector('.menu-icon');
+      if (icon) {
+        icon.src = icon.src.replace(/-1\.svg$/, '.svg').replace(/\.svg$/, '-1.svg'); 
+      }
     });
 
-    // Add the blue-bg class and set width to 100% for the clicked link
+    // Add the blue-bg class for the clicked link
     this.classList.add('blue-bg');
-    // this.style.width = '100%';
-    // this.style.padding = '0 1rem';
 
     // Remove gray-bg class from all parent elements
-    document.querySelectorAll('.menu-link').forEach(item => {
-      const parent = item.parentElement; 
+    menuLinks.forEach(item => {
+      const parent = item.parentElement;
       if (parent) {
         parent.classList.remove('gray-bg');
       }
     });
 
     // Add gray-bg class to the parent of the clicked link
-    const parentElement = this.parentElement; 
+    const parentElement = this.parentElement;
     if (parentElement) {
       parentElement.classList.add('gray-bg');
     }
@@ -103,6 +107,11 @@ document.querySelectorAll('.menu-link').forEach(link => {
     if (targetMenu) {
       targetMenu.classList.toggle('active');
     }
+
+    // Update the icon for the active link
+    const activeIcon = this.querySelector('.menu-icon');
+    if (activeIcon) {
+      activeIcon.src = activeIcon.src.replace(/-1\.svg$/, '.svg'); // Remove `-1` for active icon
+    }
   });
 });
-
