@@ -4,6 +4,7 @@ const sidebar = document.querySelector('.sidebar');
 const hiddenTexts = document.querySelectorAll('.hidden');
 const submenuItems = document.querySelectorAll('.submenu-item');
 const sidebarLogo = document.querySelector('.sidebar-logo');
+const lbLogo = document.querySelector('#lbLogo');
 const mainMenu = document.querySelector('.menu');
 const menuItems = document.querySelectorAll('.menu-item');
 const menuLinks = document.querySelectorAll('.menu-link');
@@ -30,6 +31,8 @@ sidebar.addEventListener('mouseenter', () => {
     link.style.justifyContent = 'start';
   });
   sidebarLogo.classList.add('logo-expanded'); 
+  lbLogo.style.paddingLeft = '0';
+  // lbLogo.style.justifyContent = 'center';
 });
 
 sidebar.addEventListener('mouseleave', () => {
@@ -46,6 +49,10 @@ sidebar.addEventListener('mouseleave', () => {
     item.classList.remove('icon-only-sub-menu');
   });
   sidebarLogo.classList.remove('logo-expanded');
+  sidebarLogo.style.transition = 'all 0.3s ease';
+  lbLogo.style.paddingLeft = '.8rem';
+  // lbLogo.style.justifyContent = 'start';
+  // sidebarLogo.style.justifyContent = 'center';
   menuLinks.forEach((link) => {
     link.style.width = '100%';
     link.style.justifyContent = 'center';
