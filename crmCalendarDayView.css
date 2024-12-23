@@ -83,12 +83,14 @@
     padding: 0 2rem;
 }
 
-table {
+.day-view-table {
     border-collapse: collapse;
     width: 100%;
     table-layout: fixed;
 }
-th, td {
+
+.day-view-table th, 
+.day-view-table td {
     border: 1px solid #ddd;
     text-align: left;
     word-wrap: break-word;
@@ -98,14 +100,6 @@ th, td {
 thead {
     background-color: transparent !important;
 }
-
-/* table thead tr:first-child th div {
-    width: 4.5rem;
-} */
-
-/* .column-name.time {
-    width: 100%;
-} */
 
 .column-name {
     height: 3rem;
@@ -145,61 +139,61 @@ thead {
 }
 
 /* Remove the bottom border from all th elements in the first row */
-table thead tr:nth-child(1) th {
+.day-view-table thead tr:nth-child(1) th {
     border-bottom: none !important;
 }
 
 /* Remove the top border from all th elements in the second row */
-table thead tr:nth-child(2) th {
+.day-view-table thead tr:nth-child(2) th {
     border-top: none !important;
 }
 
 
-table tbody tr:nth-child(1) td {
+.day-view-table tbody tr:nth-child(1) td {
     border-bottom: none !important;
 }
 
-table tbody tr:nth-child(2) td {
+.day-view-table tbody tr:nth-child(2) td {
     border-top: none !important;
 }
 
-table tbody tr:nth-child(2) td {
+.day-view-table tbody tr:nth-child(2) td {
     border-bottom: none !important;
 }
 
-table tbody tr:nth-child(3) td {
+.day-view-table tbody tr:nth-child(3) td {
     border-top: none !important;
 }
 
-table tbody tr:nth-child(3) td {
+.day-view-table tbody tr:nth-child(3) td {
     border-bottom: none !important;
 }
 
-table tbody tr:nth-child(4) td {
+.day-view-table tbody tr:nth-child(4) td {
     border-top: none !important;
 }
 
-table tbody tr:nth-child(4) td {
+.day-view-table tbody tr:nth-child(4) td {
     border-bottom: none !important;
 }
 
-table tbody tr:nth-child(5) td {
+.day-view-table tbody tr:nth-child(5) td {
     border-top: none !important;
 }
 
-table tbody tr:nth-child(5) td {
+.day-view-table tbody tr:nth-child(5) td {
     border-bottom: none !important;
 }
 
-table tbody tr:nth-child(6) td {
+.day-view-table tbody tr:nth-child(6) td {
     border-top: none !important;
 }
 
-table tbody tr:nth-child(6) td {
+.day-view-table tbody tr:nth-child(6) td {
     border-bottom: none !important;
 }
 
-table tbody tr:nth-child(7) td {
+.day-view-table tbody tr:nth-child(7) td {
     border-top: none !important;
 }
 
