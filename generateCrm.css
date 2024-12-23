@@ -5,7 +5,7 @@
     --orange-color: #FBA919;
 }
 
-.main-section-buttons-div {
+.main-section-generate-buttons-div {
     justify-content: space-between;    
 }
 
@@ -175,10 +175,10 @@
     font-weight: 700;
     color: var(--blue-color);
     border: none; /* Remove default borders */
-    border-top: 1px solid var(--dark-gray-color); /* Apply top border */
-    border-left: 1px solid var(--dark-gray-color); /* Apply left border */
-    border-right: 1px solid var(--dark-gray-color); /* Apply right border */
-    border-radius: .75rem .75rem 0 0; /* Round top-left and top-right corners */
+    border-top: 1px solid var(--dark-gray-color);
+    border-left: 1px solid var(--dark-gray-color);
+    border-right: 1px solid var(--dark-gray-color);
+    border-radius: .75rem .75rem 0 0;
 }
 
 .col-name {
@@ -198,12 +198,12 @@
 
 .generateCrm-table {
     width: 100%;
-    border-collapse: separate; /* Allow border-radius to work */
+    border-collapse: separate;
     border-radius: .75rem !important;
     padding: 0.25rem;
     border: 1px solid var(--dark-gray-color);
-    overflow: hidden; /* Clip content to respect border-radius */
-    background-color: #fff; /* Optional to prevent cell backgrounds showing */
+    overflow: hidden;
+    background-color: #fff;
 }
 
 .generateCrm-table thead tr {
