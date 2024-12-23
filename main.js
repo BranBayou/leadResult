@@ -77,6 +77,7 @@ menuLinks.forEach(link => {
       // Change the font color for inactive menu-text
       const menuText = item.querySelector('.menu-text');
       if (menuText) {
+        // Default color for all inactive links
         menuText.style.color = '#B0B2B9';
         menuText.style.fontWeight = '500';
       }
@@ -124,8 +125,17 @@ menuLinks.forEach(link => {
     // Change the font color for the active menu-text
     const activeMenuText = this.querySelector('.menu-text');
     if (activeMenuText) {
-      activeMenuText.style.color = '#FFFFFF';
-      activeMenuText.style.fontWeight = '600';
+      activeMenuText.style.color = '#FFFFFF'; // Active color
+      activeMenuText.style.fontWeight = '600'; // Bold for active
+    }
+
+    // Ensure submenu text remains inactive unless clicked
+    if (!this.classList.contains('submenu-item')) {
+      document.querySelectorAll('.submenu-item .menu-text').forEach(submenuText => {
+        submenuText.style.color = '#B0B2B9'; // Inactive color for submenu items
+        submenuText.style.fontWeight = '500';
+      });
     }
   });
 });
+
