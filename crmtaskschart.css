@@ -92,7 +92,10 @@ input {
 
 /* PI Chart Section */
 
-.charts-div {
+.task-charts-div {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
     padding: 1rem 0;
     overflow-x: scroll;
     scrollbar-width: none;
@@ -114,7 +117,7 @@ input {
     gap: 1rem;
 }
 
-.chart-container {
+.dount-chart-container {
     position: relative;
     width: 8.25rem;
     height: 8.25rem;
@@ -136,7 +139,7 @@ input {
       var(--chart-color-green) 96% 100%
     );
     transform: scale(0);
-    animation: grow 1s ease-out forwards;
+    animation: grow-donut 1s ease-out forwards;
     position: relative;
   }
 
@@ -152,7 +155,7 @@ input {
     z-index: 1;
   }
 
-  @keyframes grow {
+  @keyframes grow-donut {
     to {
       transform: scale(1);
     }
@@ -176,7 +179,7 @@ input {
     text-align: center;
   }
 
-  .chart-container:hover .segment-tooltip {
+  .dount-chart-container:hover .segment-tooltip {
     opacity: 1;
     transform: translate(-50%, -20px);
   }
