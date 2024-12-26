@@ -17,6 +17,18 @@
   --black-color: #000000;
   --gray-color-op1: #636363; 
   --bar-color-dard-op: rgba(255, 255, 255, 0.1);
+
+  --border-yellow: #FBA919;
+    --border-gray: #656868;
+    --border-li-gray: #687ECE;
+    --border-blue: #54A9BB;
+    --button-bg-yellow: #F7EBD6;
+    --button-bg-gray: #DFE1E3;
+    --button-bg-li-gray: #DEE4F3;
+    --button-bg-blue: #DEE9EE;
+    --button-p-color: #737373;
+    --tabel-bg: #F6F8FA;
+    --dark-gray-color: #e5e5e5;
 }
 
 * {
@@ -623,6 +635,8 @@ thead {
 th, td {
     padding: 0 1rem;
     text-align: left;
+    white-space : nowrap;
+    overflow : hidden;
 }
 
 .filter-container {
@@ -726,3 +740,1078 @@ tbody tr td {
   width: 60px;
   text-align: center;
 }
+
+/*=== CRM Task Charts Styling Start ===*/
+
+:root {
+  --orange-color: #FBA919;
+  --gray-color: #f6f8fa;
+  --chart-color-blue: #5366AB;
+  --chart-color-green: #438E9E;
+  --chart-color-yellow: #FFCF67;
+  --chart-color-orange: #FBA919;
+  --light-blue-color: #D9EEF7;
+  --blue-color: #25A0DB;
+}
+.success-report-show-div {
+  height: 2.25rem;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.success-report-show-div .report-filter-div {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 17rem;
+  border-radius: 12.5rem;
+}
+
+.success-report-show-div .report-filter-div input{
+  border: none;
+  outline: none;
+}
+
+.pichart-section {
+  position: relative;
+  background-color: white;
+  margin: 1rem 2rem;
+  padding: .25rem;
+  border-radius: .75rem;
+}
+
+.nav-buttons {
+  position: absolute;
+  background-color: var(--light-blue-color);
+  padding: 1rem;
+  top: 50%;
+  border-radius: .78rem;
+  outline: none;
+  border: none;
+}
+
+.nav-buttons:hover {
+  background-color: white;
+  border: 1px solid var(--light-blue-color);
+}
+
+.nav-buttons.next-button {
+  right: 1rem;
+}
+
+.nav-buttons.prev-button {
+  left: 1rem; 
+}
+
+.chart-title {
+  text-align: center;
+  background-color: var(--gray-color);
+  border-radius: .62rem;
+  padding: 1rem 0;
+}
+
+.chart-title h1 {
+  color: #181D30;
+  font-size: 1rem !important;
+}
+
+.success-report-show-div p {
+  font-size: .87rem;
+  font-weight: 700;
+  opacity: .6;
+}
+
+input[type="text"]::placeholder {
+  font-size: 0.81rem;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif !important;
+}
+
+input {
+  width: 100% !important;
+}
+
+
+/* PI Chart Section */
+
+.task-charts-div {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  padding: 1rem 0;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.charts-div::-webkit-scrollbar {
+  display: none;
+}
+
+
+.chart-main-con {
+  width: 27rem;
+  height: 10.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dount-chart-container {
+  position: relative;
+  width: 8.25rem;
+  height: 8.25rem;
+}
+
+.donut-chart {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--chart-color-green) 0% 10%,
+    #ffffff 10% 11%,
+    var(--chart-color-orange) 11% 25%,
+    #ffffff 25% 26%,
+    var(--chart-color-yellow) 26% 70%,
+    #ffffff 70% 71%,
+    var(--chart-color-blue) 71% 95%,
+    #ffffff 95% 96%,
+    var(--chart-color-green) 96% 100%
+  );
+  transform: scale(0);
+  animation: grow-donut 1s ease-out forwards;
+  position: relative;
+}
+
+.donut-chart::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+  background: #f4f4f9;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+@keyframes grow-donut {
+  to {
+    transform: scale(1);
+  }
+}
+
+.segment-tooltip {
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 18px;
+  display: none;
+  font-weight: 700;
+  pointer-events: none; /* Prevent tooltip from interfering with mouse events */
+  z-index: 1000;
+  white-space: nowrap; /* Prevent text wrapping */
+  width: 10rem;
+  min-height: 3rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.dount-chart-container:hover .segment-tooltip {
+  opacity: 1;
+  transform: translate(-50%, -20px);
+}
+
+.donut-chart:hover {
+  cursor: pointer;
+  filter: brightness(1.2);
+}
+
+/* Column Chart */
+
+.chart-title-bottom {
+  background-color: var(--gray-color);
+  border-radius: 10px;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.chart-title-bottom  p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #181D30;
+}
+
+.column-chart-section {
+  background-color: var(--gray-color);
+  margin: 1rem 2rem;
+  padding: .25rem;
+  border-radius: .75rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem; 
+}
+
+.column-chart-div {
+  padding: .25rem;
+  background-color: white;
+  /* height: 22rem; */
+  border-radius: 12px;
+}
+
+.graph-container {
+  width: 100%;
+  /* max-width: 600px; */
+  padding: 1rem;
+  position: relative;
+}
+.bar {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.bar-label {
+  width: 40%;
+  text-align: left;
+  font-size: .78rem;
+  font-weight: 500;
+}
+.bar-track {
+  width: 60%;
+  height: 25px;
+  border-radius: .37rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.fill-orange {
+  background-color: var(--orange-color);
+}
+
+.fill-dark {
+  background-color: #3D3E3E;;
+}
+
+.fill-blue {
+  background-color: var(--chart-color-blue);
+}
+
+.fill-green {
+  background-color: var(--chart-color-green);
+}
+
+.fill-yellow {
+  background-color: var(--chart-color-yellow);
+}
+
+.fill-gray {
+  background-color: #8989BA;
+}
+
+.bar-fill {
+  height: 1.5rem;
+  
+  width: 0;
+  border-radius: .37rem;
+  position: absolute;
+  animation: growBar 2s ease-in-out forwards;
+}
+@keyframes growBar {
+  from {
+      width: 0;
+  }
+  to {
+      width: var(--bar-width);
+  }
+}
+.percentage-scale {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: -6px;
+  width: 60%;
+  right: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.percentage-scale span,
+.y-axis2 span {
+  font-size: .75rem;
+  color: #000;
+  font-weight: 500;
+}
+
+.y-axis2 span {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.y-axis2 span .line img{
+  height: 1px;
+}
+
+/* Column chart 2 */
+
+.graph-container2 {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  position: relative;
+  padding: 1rem;
+}
+
+.y-axis2 {
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 15rem;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #555;
+  text-align: right;
+}
+.columns-container2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.columns-container2 .column-names .column-label {
+  font-size: .7rem;
+  font-weight: 500;
+  color: #181D30;
+}
+
+.columns2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 13.5rem;
+  position: relative;
+}
+.column2 {
+  width: 3rem;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  bottom: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  animation: growColumn 2s ease-in-out forwards;
+}
+.column2:nth-child(1) {
+  height: 80%;
+  animation-delay: 0s;
+  background: var(--orange-color);
+}
+.column2:nth-child(2) {
+  height: 60%;
+  animation-delay: 0.2s;
+  background: var(--chart-color-yellow);
+}
+.column2:nth-child(3) {
+  height: 40%;
+  animation-delay: 0.4s;
+  background: var(--chart-color-blue);
+}
+.column2-label {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+@keyframes growColumn {
+  from {
+      transform: scaleY(0);
+  }
+  to {
+      transform: scaleY(1);
+  }
+}
+
+.column-names {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*=== CRM Task Charts Styling End ===*/
+
+/**== Generate CRM Starts ==**/
+
+:root {
+  --blue-color: #25A0DB;
+  --gray-color: #f6f8fa;
+  --dark-gray-color: #e5e5e5;
+  --orange-color: #FBA919;
+}
+
+.main-section-generate-buttons-div {
+  justify-content: space-between;    
+}
+
+.add-message-button-div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-section-button-tasks {
+  background-color: var(--orange-color) !important;
+  opacity: 100% !important;
+  color: white !important;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.add-message-button-div a {
+  display: flex;
+  align-items: center;
+  color: var(--blue-color);
+  gap: 1rem;
+  text-decoration: none;
+  font-size: .87rem;
+  font-weight: 600;
+}
+
+.message-control-bettons {
+  display: flex;
+  gap: 1rem;
+}
+
+.message-control-bettons button {
+  width: 13.5rem;
+  padding: 0 1rem;
+}
+
+.campaign-section {
+  padding: 0 2rem;
+  display: flex;
+  /* gap: 2rem; */
+}
+
+.show-campaign-step,
+.campaign-div {
+  background-color: white;
+}
+
+.steps-container {
+  width: 15.71%;
+}
+
+/* Steps style start */
+
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  background-color: white;
+  padding: 1rem;
+  border-radius: .75rem;
+  max-height: 14.5rem;
+}
+
+.steps-container::before {
+  content: '';
+  position: absolute;
+  top: .5rem;
+  left: .7rem;
+  width: 2px;
+  height: 78%;
+  background-color: var(--dark-gray-color);
+  margin: 1rem;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.step:last-child {
+  margin-bottom: 0;
+}
+
+.step-number {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--dark-gray-color);
+  color: #737373;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .75rem;
+  font-weight: 500;
+  position: relative;
+  border: 3px solid white;
+  cursor: pointer;
+}
+
+.step-number:hover{
+  border: 2px solid var(--blue-color);
+}
+
+.step-number.active-step-number {
+  background-color: var(--blue-color);
+  color: white
+}
+
+.step.active-step:hover .active-step-number {
+  border: 2px solid var(--blue-color);
+}
+
+.step-name {
+  font-size: .75rem;
+  font-weight: 500;
+  color: #737373;
+  margin-left: .5rem;
+  cursor: pointer;
+}
+
+.step-name.active-step-name {
+  color: #000;
+  font-weight: 700;
+}
+
+/* Steps style end */
+
+.campaign-div {
+  width: 84.29%;
+  margin-left: 2rem;
+  border-radius: .75rem;
+  padding: 1.5rem;
+}
+
+.information-div {
+  width: 35rem;
+  margin-bottom: 1rem;
+}
+
+.information-div h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.message-type-div {
+  display: flex;
+}
+
+.message-type-div button{
+  height: 2.5rem;
+  padding: 0 1.5rem;
+  background-color: transparent;
+}
+
+.current-message {
+  font-size: .75rem;
+  font-weight: 700;
+  color: #999999;
+  border: none;
+}
+
+.previous-message {
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--blue-color);
+  border: none; /* Remove default borders */
+  border-top: 1px solid var(--dark-gray-color);
+  border-left: 1px solid var(--dark-gray-color);
+  border-right: 1px solid var(--dark-gray-color);
+  border-radius: .75rem .75rem 0 0;
+}
+
+.col-name {
+  font-size: .62rem;
+  font-weight: 700;
+}
+
+/* Table Styling */
+
+.filter-div {
+  display: flex;
+  background-color: white;
+  margin-top: .5rem;
+  padding: .5rem .5rem;
+  border-radius: .62rem;
+}
+
+.generateCrm-table {
+  width: 100%;
+  border-collapse: separate;
+  border-radius: .75rem !important;
+  padding: 0.25rem;
+  border: 1px solid var(--dark-gray-color);
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.generateCrm-table thead tr {
+  height: 5.2rem;
+}
+
+.generateCrm-table tbody tr {
+  height: 3rem;
+}
+
+.generateCrm-table tbody tr td {
+  font-size: .81rem;
+  font-weight: 400;
+}
+
+tr {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--dark-gray-color);
+}
+
+.generateCrm-table td {
+  background-color: inherit;
+  border-bottom: 1px solid var(--dark-gray-color);
+}
+
+
+  /* Set column widths */
+  .generateCrm-table th:nth-child(1), 
+  .generateCrm-table td:nth-child(1) {
+      width: 38.58%;
+  }
+
+  .generateCrm-table th:nth-child(2), 
+  .generateCrm-table td:nth-child(2) {
+      width: 23.62%;
+  }
+
+  .generateCrm-table th:nth-child(3), 
+  .generateCrm-table td:nth-child(3) {
+      width: 23.62%;
+  }
+
+  .generateCrm-table th:nth-child(4), 
+  .generateCrm-table td:nth-child(4) {
+      width: 14.17%;
+  }
+
+  /**== Generate CRM Ends ==**/
+
+  /**== CRM Calendar Day View Starts ==**/
+
+  :root {
+    --blue-color: #25A0DB;
+    --gray-color: #f6f8fa;
+    --dark-gray-color: #e5e5e5;
+}
+
+.tob-bottom-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0; /* 16px */
+}
+
+.report-filter-div {
+    background-color: white;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    width: 14.3rem;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    border-radius: 12rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.report-filter-div input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.left-side-div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.left-side-div p {
+    font-size: .78rem;
+    font-weight: 700;
+    opacity: .6;
+}
+
+.buttons-div {
+    display: flex;
+    gap: 1rem;
+}
+
+.buttons-div button {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+    border-radius: 200px;
+    border: 2px solid var(--blue-color);
+    background-color: white;
+    color: var(--blue-color);
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+#reloadButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #CA8182;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: .8rem;
+    border: none;
+}
+
+/* Table Styling */
+
+.day-view-table-wrpper {
+    padding: .25rem;
+    background-color: white;
+    border-radius: .75rem;
+}
+
+.appt-table-section {
+    padding: 0 2rem;
+}
+
+.day-view-table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.day-view-table th, 
+.day-view-table td {
+    border: 1px solid #ddd;
+    text-align: left;
+    word-wrap: break-word;
+    padding: .25rem;
+}
+
+thead {
+    background-color: transparent !important;
+}
+
+.column-name {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray-color);
+    border-radius: .75rem;
+    font-size: .87rem;
+    font-weight: 700;
+}
+
+.second-col-hd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 2rem;
+    margin: .5rem;
+}
+
+.second-col-hd p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-col-hd p .nums {
+    opacity: 100% !important;
+}
+
+.second-col-hd .name {
+    font-size: .68rem;
+    font-weight: 600;
+    opacity: .55;
+}
+
+/* Remove the bottom border from all th elements in the first row */
+.day-view-table thead tr:nth-child(1) th {
+    border-bottom: none !important;
+}
+
+/* Remove the top border from all th elements in the second row */
+.day-view-table thead tr:nth-child(2) th {
+    border-top: none !important;
+}
+
+
+.day-view-table tbody tr:nth-child(1) td {
+    border-bottom: none !important;
+}
+
+.day-view-table tbody tr:nth-child(2) td {
+    border-top: none !important;
+}
+
+.day-view-table tbody tr:nth-child(2) td {
+    border-bottom: none !important;
+}
+
+.day-view-table tbody tr:nth-child(3) td {
+    border-top: none !important;
+}
+
+.day-view-table tbody tr:nth-child(3) td {
+    border-bottom: none !important;
+}
+
+.day-view-table tbody tr:nth-child(4) td {
+    border-top: none !important;
+}
+
+.day-view-table tbody tr:nth-child(4) td {
+    border-bottom: none !important;
+}
+
+.day-view-table tbody tr:nth-child(5) td {
+    border-top: none !important;
+}
+
+.day-view-table tbody tr:nth-child(5) td {
+    border-bottom: none !important;
+}
+
+.day-view-table tbody tr:nth-child(6) td {
+    border-top: none !important;
+}
+
+.day-view-table tbody tr:nth-child(6) td {
+    border-bottom: none !important;
+}
+
+.day-view-table tbody tr:nth-child(7) td {
+    border-top: none !important;
+}
+
+.related-person-div {
+    display: flex;
+    gap: .5rem;
+    padding: .5rem;
+}
+
+.related-person {
+    height: 2.5rem;
+    background-color: #FFF6E8;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    border: 1px solid #F6E0BB;
+    font-size: .68rem;
+    font-weight: 400;
+    line-height: .87rem;
+}
+
+.related-other-div {
+    display: flex;
+    gap: .5rem;
+    padding: .5rem;
+}
+
+.related-other {
+    height: 2.5rem;
+    background-color: #EAEAEA;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    border: 1px solid #CBCBCB;
+    font-size: .68rem;
+    font-weight: 400;
+    line-height: .87rem;
+}
+
+/* related-person-div-second */
+.related-person-second {
+    width: 50% !important;
+}
+/* related-other-div-second */
+.related-other-second {
+    width: 50% !important;
+}
+
+.show-time {
+    font-size: .75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: .12rem;
+    height: 2rem;
+}
+
+.show-time sub {
+    font-size: 11px;
+}
+
+  /**== CRM Calendar Day View Ends ==**/
+
+  /**== CRM Calendar Month View Starts ==**/
+
+  :root {
+    --blue-color: #25A0DB;
+    --gray-color: #f6f8fa;
+    --dark-gray-color: #e5e5e5;
+}
+
+.top-button-navs {
+    display: flex;
+    gap: 1rem;
+}
+
+.top-button-navs button:nth-child(3) {
+    background-color: var(--orange-color);
+    color: var(--white-color);
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+    opacity: 100%;
+}
+
+.tob-bottom-div.month {
+    padding-bottom: 0;
+    padding-top: 1.5rem;
+}
+
+.left-side-div.month {
+    gap: 3em;
+    align-items: center;
+}
+
+.select-month-div,
+.select-category-div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.select-month-div p,
+.select-category-div p {
+    font-size: .87rem;
+    font-weight: 700;
+    opacity: .6;
+}
+
+.select-month-inner-div,
+.select-category-inner-div {
+    background-color: white;
+    height: 2.25rem;
+    min-width: 13.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12.5rem;
+    padding: 0 .5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+#month-display {
+    font-size: .81rem;
+    transition: transform 0.5s ease;
+    font-weight: 400;
+}
+
+#select-element {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: white;
+    padding: .5rem 1rem .5rem 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.buttons-div.month button {
+    border: none;
+}
+
+/** Monthly View Table Styling **/
+
+.table-wrapper {
+    padding: .25rem;
+    background-color: white;
+    border-radius: .75rem;
+}
+
+.calendar-table-month {
+    background-color: white;
+    border-collapse: collapse;
+    border: 1px solid var(--dark-gray-color);
+}
+
+.calendar-table-month thead tr {
+    height: 3rem;
+    
+}
+
+.calendar-table-month thead tr th{
+    background-color: white;
+    text-align: center;
+    font-size: .87rem;
+    border-bottom: none !important;
+    padding: .25rem !important;
+}
+
+.calendar-table-month tbody tr {
+    height: 5.5rem;
+}
+
+.calendar-table-month tbody tr:first-child td {
+    border-top: none !important;
+}
+
+.calendar-table-month tbody tr td {
+    vertical-align: top;
+    padding: .13rem;
+}
+
+.calendar-table-month .weekday {
+    background-color: var(--gray-color);
+    padding: 1rem 0;
+    border-radius: .62rem;
+}
+
+.calendar-table-month .day-cell {
+    position: relative;
+    font-size: .62rem;
+    line-height: .87rem;
+}
+
+.calendar-table-month .day {
+    position: absolute;
+    right: 1rem;
+    font-size: .87rem !important;
+    font-weight: 400;
+}
+
+.calendar-table-month .has-appt {
+    background-color: #fff7e9;
+    height: 5.5rem !important;
+    width: 100%;
+    padding: .5rem;
+}
+
+  /**== CRM Calendar Month View Ends ==**/
