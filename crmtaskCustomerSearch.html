@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>CRM-System-Tasks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Side Navbar Starts-->
+    <div class="sidebar sidebar-only-icon">
+        <form name="" method="" action="" id="">
+            <div class="sidebar-logo">
+                <div id="lbLogo">
+                    <img src="/assets/logoImage1.svg" alt="LeadResult-Logo" class="sidebar-logo-img" />
+                    <div class="logo-text-div">
+                        <h1 class="sidebar-logo-img sidebar-logo-img2 hidden" style="opacity: 0; transition: opacity 0.3s">
+                            LeadResult
+                        </h1>
+                        <p class="sidebar-logo-img sidebar-logo-img2 hidden" style="opacity: 0; transition: opacity 0.3s">
+                            DRIVING CUSTOMER RESPONSE
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu-item">
+                    <a id="nScheduler" title="Scheduling" class="menu-link icon-only-menu" href='' data-target="smScheduler">
+                        <img class="menu-icon main-menu-icon" src="assets/oper2024Icons/dashboard-1.svg" style="border-width: 0px" />
+                        <span class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s;">Scheduling</span></a>
+                    <div id="smScheduler" class="submenu hidden2">
+                        <a id="nSchedulerSchedulerUnifiedSearch" title="Appointments"
+                            class="submenu-item icon-only-sub-menu" href=''>
+                            <img class="menu-icon sub-menu-icon" src="assets/oper2024Icons/appointmnt-1.svg" style="border-width: 0px" />
+                            <span class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Appointments</span></a>
+                        <a id="nSchedulerSchedulerAppointmentCalendar" title="Appointment Calendar"
+                            class="submenu-item icon-only-sub-menu" href=''>
+                            <img class="menu-icon sub-menu-icon" src="assets/oper2024Icons/apptstatus-1.svg" style="border-width: 0px" /><span
+                                class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Calendar</span></a>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <a id="nCRM" title="CRM" class="menu-link icon-only-menu" href='' data-target="smCRM">
+                        <img class="menu-icon main-menu-icon" src="assets/oper2024Icons/crm-1.svg" style="border-width: 0px" /><span
+                            class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">CRM</span></a>
+                    <div id="smCRM" class="submenu hidden2">
+                        <a id="nCRMCRMTasks" title="Tasks" class="submenu-item icon-only-sub-menu"
+                            href=''><img
+                                class="menu-icon sub-menu-icon" src="assets/oper2024Icons/Tasks-1.svg" style="border-width: 0px" /><span
+                                class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Tasks</span></a>
+                        <a id="nCRMCRMReports" title="Reports" class="submenu-item icon-only-sub-menu"
+                            href=''><img
+                                class="menu-icon sub-menu-icon" src="assets/oper2024Icons/Reports-1.svg" style="border-width: 0px" /><span
+                                class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Reports</span></a>
+                    </div>
+                </div>
+                <div class="menu-item" data-target="">
+                    <a id="nTextPro" title="Text Pro" class="menu-link icon-only-menu"href=''>
+                        <img class="menu-icon main-menu-icon" src="assets/oper2024Icons/text_pro-1.svg" style="border-width: 0px" /><span
+                            class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Text Pro</span></a>
+                </div>
+                <div class="menu-item" data-target="">
+                    <a id="nSchedulerDNC" title="DNC" class="menu-link icon-only-menu" href=''>
+                        <img class="menu-icon main-menu-icon" src="assets/oper2024Icons/dnc-1.svg" style="border-width: 0px" /><span
+                            class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">DNC</span></a>
+                </div>
+                <div class="menu-item" data-target="">
+                    <a id="nLogout" title="Logout" class="menu-link icon-only-menu" href=''>
+                        <img class="menu-icon main-menu-icon" src="assets/oper2024Icons/Logout-1.svg" style="border-width: 0px" /><span
+                            class="menu-text hidden" style="opacity: 0; transition: opacity 0.3s">Logout</span></a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- Side Navbar Ends-->
+
+    <!-- Main Content Starts-->
+    <main>
+        <header>
+            <div class="header-left">
+                <img src="assets/menu1.svg" alt="header-button">
+                <p>Welcome, Brain Parente <span>(Madison Honda)</span></p>
+            </div>
+            <div class="header-right">
+                <button class="switch-store-button">
+                    <span>Switch Store</span>
+                    <img src="assets/arrowDown.svg" alt="arrow-down">
+                </button>
+                <button class="prev-arrow-button">
+                    <img src="assets/prevArrow.svg" alt="prev-arrow">
+                </button>
+                <button class="next-arrow-button">
+                    <img src="assets/nextArrow.svg" alt="next-arrow">
+                </button>
+            </div>
+        </header>
+        
+        <section class="main-section-top">
+            <h1>Tasks</h1>
+            <div class="main-section-buttons-div">
+                <button class="main-section-button-search">Search</button>
+                <button class="main-section-button-tasks">System Tasks</button>
+                <button class="main-section-button-manual">Manual Tasks</button>
+            </div>
+        </section>
+
+        <section class="tasks-category-section">
+            <buttton class="active-tasks"><p>Active Tasks</p><span>520</span></buttton>
+            <buttton class="pending-tasks"><p>Pending Tasks</p><span>80</span></buttton>
+            <buttton class="completed-tasks"><p>Completed Tasks</p><span>100</span></buttton>
+            <buttton class="total-tasks"><p>Total Tasks</p><span>700</span></buttton>
+        </section>
+
+        <section class="total-tasks-show">
+            <p>520 Active System Tasks</p>
+        </section>
+
+        <section class="tasks-tabel-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="filter-container">
+                                <p class="th-name">First Name</p>
+                                <div class="filter-input-div">
+                                    <input type="text" class="filter-input" placeholder="">
+                                    <img class="filter-Icon" src="assets/filterIcon.svg" alt="filter-icon">
+                                </div>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="filter-container">
+                                <p class="th-name">Last Name</p>
+                                <div class="filter-input-div">
+                                    <input type="text" class="filter-input" placeholder="">
+                                    <img class="filter-Icon" src="assets/filterIcon.svg" alt="filter-icon">
+                                </div>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="filter-container">
+                                <p class="th-name">Campaign</p>
+                                <div class="filter-input-div">
+                                    <input type="text" class="filter-input" placeholder="">
+                                    <img class="filter-Icon" src="assets/filterIcon.svg" alt="filter-icon">
+                                </div>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="filter-container">
+                                <p class="th-name">Operator</p>
+                                <div class="filter-input-div">
+                                    <input type="text" class="filter-input" placeholder="">
+                                    <img class="filter-Icon" src="assets/filterIcon.svg" alt="filter-icon">
+                                </div>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="filter-container">
+                                <p class="th-name">Last Visit</p>
+                                <div class="filter-input-div">
+                                    <input type="text" class="filter-input" placeholder="">
+                                    <img class="filter-Icon" src="assets/filterIcon.svg" alt="filter-icon">
+                                </div>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="filter-container">
+                                
+                                <p class="th-name">Vehicle</p>
+                                <div class="filter-input-div">
+                                    <input type="text" class="filter-input" placeholder="">
+                                    <img class="filter-Icon" src="assets/filterIcon.svg" alt="filter-icon">
+                                </div>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="filter-container">
+                                <p class="th-name">Notes</p>
+                                <div class="filter-input-div">
+                                    <input type="text" class="filter-input" placeholder="">
+                                    <img class="filter-Icon" src="assets/filterIcon.svg" alt="filter-icon">
+                                </div>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="filter-container">
+                                <p class="th-name">Date Created</p>
+                                <div class="filter-input-div">
+                                    <input type="text" class="filter-input" placeholder="">
+                                    <img class="filter-Icon" src="assets/filterIcon.svg" alt="filter-icon">
+                                </div>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="filter-container">
+                                <p class="th-name">Tasks</p>
+                                <div class="filter-input-div">
+                                    <input type="text" class="filter-input" placeholder="">
+                                    <img class="filter-Icon" src="assets/filterIcon.svg" alt="filter-icon">
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Linda</td>
+                        <td>Walker</td>
+                        <td>Summer Campaign</td>
+                        <td>Jacky Sarmiento</td>
+                        <td>2024-12-01</td>
+                        <td>2024 ACURA TSX</td>
+                        <td>System Task Created</td>
+                        <td>2024-12-10</td>
+                        <td>Call</td>
+                    </tr>
+                    <tr>
+                        <td>Linda</td>
+                        <td>Walker</td>
+                        <td>Summer Campaign</td>
+                        <td>Jacky Sarmiento</td>
+                        <td>2024-12-01</td>
+                        <td>2024 ACURA TSX</td>
+                        <td>System Task Created</td>
+                        <td>2024-12-10</td>
+                        <td>Call</td>
+                    </tr>
+                    <tr>
+                        <td>Linda</td>
+                        <td>Walker</td>
+                        <td>Summer Campaign</td>
+                        <td>Jacky Sarmiento</td>
+                        <td>2024-12-01</td>
+                        <td>2024 ACURA TSX</td>
+                        <td>System Task Created</td>
+                        <td>2024-12-10</td>
+                        <td>Call</td>
+                    </tr>
+                    <tr>
+                        <td>Linda</td>
+                        <td>Walker</td>
+                        <td>Summer Campaign</td>
+                        <td>Jacky Sarmiento</td>
+                        <td>2024-12-01</td>
+                        <td>2024 ACURA TSX</td>
+                        <td>System Task Created</td>
+                        <td>2024-12-10</td>
+                        <td>Call</td>
+                    </tr>
+                    <tr>
+                        <td>Linda</td>
+                        <td>Walker</td>
+                        <td>Summer Campaign</td>
+                        <td>Jacky Sarmiento</td>
+                        <td>2024-12-01</td>
+                        <td>2024 ACURA TSX</td>
+                        <td>System Task Created</td>
+                        <td>2024-12-10</td>
+                        <td>Call</td>
+                    </tr>
+                    <tr>
+                        <td>Linda</td>
+                        <td>Walker</td>
+                        <td>Summer Campaign</td>
+                        <td>Jacky Sarmiento</td>
+                        <td>2024-12-01</td>
+                        <td>2024 ACURA TSX</td>
+                        <td>System Task Created</td>
+                        <td>2024-12-10</td>
+                        <td>Call</td>
+                    </tr>
+                    <tr>
+                        <td>Linda</td>
+                        <td>Walker</td>
+                        <td>Summer Campaign</td>
+                        <td>Jacky Sarmiento</td>
+                        <td>2024-12-01</td>
+                        <td>2024 ACURA TSX</td>
+                        <td>System Task Created</td>
+                        <td>2024-12-10</td>
+                        <td>Call</td>
+                    </tr>
+                    <tr>
+                        <td>Linda</td>
+                        <td>Walker</td>
+                        <td>Summer Campaign</td>
+                        <td>Jacky Sarmiento</td>
+                        <td>2024-12-01</td>
+                        <td>2024 ACURA TSX</td>
+                        <td>System Task Created</td>
+                        <td>2024-12-10</td>
+                        <td>Call</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+    <!-- Main Content Ends-->
+    <script src="main.js"></script>
+</body>
+</html>
