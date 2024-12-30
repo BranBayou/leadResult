@@ -1817,9 +1817,22 @@ button {
   /**== CRM Calendar Month View Ends ==**/
 
 .customer-serach-section {
-
+  padding: 0 2rem;
 }
 
 .customer-serach-div {
-  
+  width: 47.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--white-color);
+  margin: 1rem 0;
+  padding: .75rem 1rem;
+  border-radius: 12.5rem;
+}
+
+.customer-serach-div input {
+  height: 2rem;
+  border: none;
+  outline: none;
 }
