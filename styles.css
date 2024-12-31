@@ -1826,13 +1826,43 @@ button {
   align-items: center;
   gap: 1rem;
   background-color: var(--white-color);
-  margin: 1rem 0;
+  margin-top: 1.5rem;
   padding: .75rem 1rem;
   border-radius: 12.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.customer-serach-div img {
+  padding: 0 .5rem;
 }
 
 .customer-serach-div input {
   height: 2rem;
   border: none;
   outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.customer-serach-div input::placeholder {
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: .5;
+  color: var(--black-color);
+}
+
+.customer-serach-div a {
+  font-size: .87rem;
+  font-weight: 700;
+  color: var(--blue-color);
+  text-decoration: none;
+  border: 2px solid var(--blue-color);
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  border-radius: 12.5rem;
+  width: 7.5rem;
+  cursor: pointer;
 }
