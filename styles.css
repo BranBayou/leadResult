@@ -1816,6 +1816,8 @@ button {
 
   /**== CRM Calendar Month View Ends ==**/
 
+/*== Customer Search Button Start ==*/
+
 .customer-serach-section {
   padding: 0 2rem;
 }
@@ -1827,9 +1829,10 @@ button {
   gap: 1rem;
   background-color: var(--white-color);
   margin-top: 1.5rem;
+  margin-bottom: .5rem;
   padding: .75rem 1rem;
   border-radius: 12.5rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .customer-serach-div img {
@@ -1866,3 +1869,5 @@ button {
   width: 7.5rem;
   cursor: pointer;
 }
+
+/*== Customer Search Button Start ==*/
